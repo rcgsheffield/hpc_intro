@@ -1,0 +1,15 @@
+#!/bin/bash
+#
+# This is an example script for submitting mpi parallel jobs
+# 
+# Use this script as a template for your mpi jobs 
+#$ -l h_rt=1:00:00
+#$ -j y
+#$ -pe mpi 4 
+
+ 
+# 
+module load  mpi/openmpi/2.0.1/intel-17.0.0
+
+
+ mpirun ./diffuse  < testmpi.dat
