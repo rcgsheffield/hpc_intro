@@ -1,0 +1,2 @@
+ANSYS, inc is not one program/code. We general use Mechanical (APDL), Fluent & CFX. We will for now only use these 3 for teaching.
+There are also many others, but mainly they are based upon one of 3 primary packages.
