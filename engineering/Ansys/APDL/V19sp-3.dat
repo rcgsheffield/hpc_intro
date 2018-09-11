@@ -1,0 +1,97 @@
+/verify,V19sp-3
+/verify,off       ! /verify is used by compare to determine the jobname
+/title, V19sp-3,   ANSYS Mechanical Benchmark Test
+
+/COM       MODEL NAME: SPEAKER
+/COM    ANALYSIS TYPE: HARMONIC, LINEAR, STRUCTURAL
+/COM    SOLVER CHOICE: SPARSE, COMPLEX-VALUE, SYMMETRIC
+
+! error trap for any version other than v19
+checkver
+
+! controllable parameters
+numFrq=1
+toler=0.02
+
+! input geometry and loads
+/input,V19sp-3geom,dat
+
+! compute solution
+/solu
+antype,harmic
+harfrq,700,1000
+hropt,full
+thexpand,off
+kbc,1
+nsub,numFrq
+outres,all,none
+outres,nsol,all
+outres,rsol,all
+outres,nload,all
+outres,strs,all
+eqslv,sparse
+dspopt,,mopt,,-1,,perf
+solve
+fini
+
+/post1
+/nopr
+set,last,,,real
+nsort,u,x,,,1
+*get,maxUXr,sort,0,max
+nsort,u,y,,,1
+*get,maxUYr,sort,0,max
+nsort,u,z,,,1
+*get,maxUZr,sort,0,max
+set,last,,,imag
+nsort,u,x,,,1
+*get,maxUXi,sort,0,max
+nsort,u,y,,,1
+*get,maxUYi,sort,0,max
+nsort,u,z,,,1
+*get,maxUZi,sort,0,max
+
+! only check results when using 1 frequency
+*if,numFrq,ne,1,then
+  /exit,nosave
+*endif
+
+! check accuracy of results
+relDiff=abs(maxUXr-0.625431E-05)/0.625431E-05+abs(maxUXi-0.221248E-05)/0.221248E-05
+*if,relDiff,gt,toler,then
+   /nolist
+   /com,**********************************************************
+   /com,*                                                        *
+   /com,*  FAILURE: Accuracy of UX is unacceptable!!!            *
+   /com,*           Please report this error to ANSYS            *
+   /com,*                                                        *
+   /com,**********************************************************
+   /golist
+*endif
+
+relDiff=abs(maxUYr-0.125693E-04)/0.125693E-04+abs(maxUYi-0.826635E-05)/0.826635E-05
+*if,relDiff,gt,toler,then
+   /nolist
+   /com,**********************************************************
+   /com,*                                                        *
+   /com,*  FAILURE: Accuracy of UY is unacceptable!!!            *
+   /com,*           Please report this error to ANSYS            *
+   /com,*                                                        *
+   /com,**********************************************************
+   /golist
+*endif
+
+relDiff=abs(maxUZr-0.626090E-05)/0.626090E-05+abs(maxUZi-0.221281E-05)/0.221281E-05
+*if,relDiff,gt,toler,then
+   /nolist
+   /com,**********************************************************
+   /com,*                                                        *
+   /com,*  FAILURE: Accuracy of UZ is unacceptable!!!            *
+   /com,*           Please report this error to ANSYS            *
+   /com,*                                                        *
+   /com,**********************************************************
+   /golist
+*endif
+
+/exit,nosave
+
