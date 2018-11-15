@@ -1,0 +1,6 @@
+
+/file read-case "/home/cs1bdh/fluent/aerofoil_model.cas"
+/solve/initialize/hyb-initialization
+/file/write-data aerofoil_model_case.out
+
+/exit
