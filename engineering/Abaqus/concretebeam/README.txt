@@ -23,7 +23,9 @@ qstat
 3. Start the abaqus workbench
 
 module load apps/abaqus/2017/binary
-abaqus cae
+abaqus cae -mesa
+
+Note the mesa option forces software rendering
 
 
 4. Visualise the output from the model you just ran
