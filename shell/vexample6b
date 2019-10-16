@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# This script  expects to be invoked with parameters
+# It lists the values of these parameters by using
+#  "$*" and "$@"
+#  " " ARE IMPORTANT.  
+#  Experiment what happens if you remove them ? 
+#  
+
+echo " This command is invoked with $# parameters"
+echo " first parameter is $1 "
+echo " second parameter is $2 "
+
+echo 'Accessing all parameters by using $*'
+for i in "$*" 
+  do
+    echo "Parameter is:" $i 
+  done
+echo ' Now accessing them with $@ ' 
+for  i in "$@"
+   do
+    echo "Parameter is:" $i 
+  done 
+
+ 

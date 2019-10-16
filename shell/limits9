@@ -1,0 +1,28 @@
+#!/bin/bash
+#
+#  This script expects a single parameter which a a whole number.
+#  It will perform a series calculation of numbers from 1 to that number.
+#  It skips numbers that are divisible by 2 3 and 5 during the calculations. 
+#
+LIMIT=2400    # test sum against this and stop processing if sum is bigger
+num=0
+
+while [ "$num" -le "$1" ]  
+do
+  num=$(($num+1))
+  sum=$(( sum+ $num * ($num + 1) ))
+  if [ $(($num % 2 )) -eq 0  ] || [ $(($num % 3 )) -eq 0 ] || [ $(($num % 5 )) -eq 0 ]
+   then
+     echo "skipping "
+     continue
+  fi
+  echo " Processing $num . Value of series : $sum" 
+  
+  if [ "$sum" -gt $LIMIT ] 
+    then
+     echo "Aborted: Numbers getting too big."
+     break
+  fi 
+  
+done  
+echo "Finished."

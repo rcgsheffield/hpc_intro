@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# This example adds integer numbers together and prints out the result.
+# It expects at least two parameters from the command line.
+#  This version demonstrates the use of if statements, the while loops and the use of the shift command.
+#  
+#  Exercises:  
+# (1) Rewrite this script using for loops. ( Answer is in maths2.sh ) ( another cryptic answer is in maths3.sh )
+# (2) Add code to check that the parameters are valid numbers ( Answer is in maths4.sh )
+# (3) Rewrite this script so that real numbers as well as integers can be used 
+#            Hint: Use bc command , type man bc . ( Answer is in maths5.sh )
+# (4) If insufficient number of parameters given, provide help via an internal function and exit ( Answer is in maths6.sh )
+if [ $# -lt 2 ] 
+then
+  echo "Expecting at least two parameters."
+else
+  sum=0;
+  while [ "$1" ] 
+  do 
+    sum=$((  sum + $1 )) 
+    shift
+  done
+fi 
+echo " Sum of the numbers is:  $sum "
+
+
+

@@ -1,0 +1,25 @@
+#!/bin/csh 
+#  One or more of the following parameters can be used on the above line:
+#    -f : implies fast start: When a shell script is started users .cshrc and
+#          .login files are executed. But this option skips that step.
+#    -x or -X : very useful for debugging ( recommend -x ):Experiment ?
+#    -n  : interpret but not execute
+#    -v  : verbose : echo details .
+#
+# 
+#  There are two ways of setting the path
+#  (1) CSH Shell via setenv ( only csh )
+setenv PATH $PATH":/usr/local/courses/bin"  
+# echo $PATH
+#   (2) via set. 
+set path=($path /usr/local/courses/bin)
+# variables path  and PATH are very closely linked and should normally 
+# have the same value.
+# 
+# Legacy : sh knows only $PATH whereas csh and tcsh knows also about $path 
+#          as much as possible c-shell keeps these two variables 
+#          automatically synchronised. i.e. setenv PATH will also set path.
+# PATH is a predefined environment variable. Others are SHELL,PWD,TERM ...
+echo $path
+echo $PATH
+

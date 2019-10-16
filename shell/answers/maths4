@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# This example adds integer numbers together and prints out the result.
+# It expects at least two parameters from the command line.
+#  This version demonstrates the use of if clause , while loops and case statement 
+#
+#  Exercise:  If a non numeric parameter found, discontinue the calculations and inform user.
+#  
+if [ $# -lt 2 ] 
+then
+  echo "Expecting at least two parameters."
+else
+  sum=0;
+  while [ "$1" ] 
+  do 
+
+    case $1 in
+#  the first case will catch every string that contains one or more occurances of a non-numeric character .
+      *[!0-9]* ) echo "parameter: $1 is ignored. " ;;
+# so...  what is left is strings with purely numeric characters 
+      *) sum=$((  sum + $1 )) ;;
+    esac 
+
+### here is another alternative to catching non-numeric parameters.
+### uncomment the next three lines to see if it works ....
+###    if [ "$1" -eq "$1" ] 2>/dev/null;  then
+###      sum=$((  sum + $1 )) 
+###    fi
+
+    shift
+  done
+fi 
+echo " Sum of the numbers is:  $sum "
+
+
+

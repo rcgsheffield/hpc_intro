@@ -1,0 +1,7 @@
+#!/bin/bash
+ls > temp_001.fil
+while read fname
+do
+  file $fname
+done < temp_001.fil
+rm  temp_001.fil

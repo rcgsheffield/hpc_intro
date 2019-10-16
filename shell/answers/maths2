@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# This example adds integer numbers together and prints out the result.
+# It expects at least two parameters from the command line.
+#
+#  The use of if statements and for loops are demonstrated. 
+# 
+
+if [ $# -lt 2 ] 
+then
+  echo "Expecting at least two parameters."
+else
+  sum=0
+  nn=$#
+  for ((i=1; i<=$nn;i++)) 
+  do 
+     sum=$((  sum + $1 )) 
+     shift
+  done
+fi 
+echo " Sum of the numbers is:  $sum "
+while [ "$1" ] 
+do 
+    sum=$((  sum + $1 )) 
+    shift
+done
+
+

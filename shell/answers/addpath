@@ -1,0 +1,13 @@
+#!/bin/bash
+#
+# One or more of the following parameters can be used on the above bang line:
+#    -f  : implies fast start: When a shell script is started users .bashrc and
+#          .login files are executed. But this option skips that step.
+#    -x  : very useful for debugging ( recommend -x ):Experiment ?
+#    -n  : interpret but not execute
+#    -v  : verbose : echo details .
+#adding your subdirectory (bin) to the path ....
+# Note that you can add to the beginning ( as in this case ) or
+# to the end of the PATH. DO you know what difference this makes ?
+PATH="$HOME/bin":$PATH
+echo $PATH

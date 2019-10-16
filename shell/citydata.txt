@@ -1,0 +1,7 @@
+ London  7,000,000
+ Birmingham  1,000,000
+ Leeds__   726,000
+Glasgow 616,000
+Sheffield 530,000
+Bradford  483,000
+

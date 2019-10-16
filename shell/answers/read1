@@ -1,0 +1,18 @@
+#!/bin/bash
+#
+# An example Bash shell script which reads two variables 
+#  from the command line and writes them out.
+# Note that the first line is called the BANG-LINE as it starts with !
+# It specifyies the type of shell this script is written in.
+# If there is no bang-line the operating system will use the default shell type
+#  which is usually bash but it could be csh.
+#
+#  D.Savas (2015) 
+#  
+ 
+# uncomment the following lines one at a time to 
+# see the effect of quotes etc. 
+# 
+  echo "Variable one contains:  $1 , variable two contains: $2 "
+# The following line would not have worked. Why ?
+# echo 'Variable one contains:  $1 , variable two contains: $2 ' 

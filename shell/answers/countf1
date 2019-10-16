@@ -1,0 +1,18 @@
+#!/bin/sh
+# 
+# This script reads the name of two directories from the command line
+# and calculates the total number of files in both directories
+# and prints it out.
+#  
+# D.Savas 17.12.03
+#
+nfiles1=`ls $1 | wc -w`
+nfiles2=`ls $2 | wc -w`
+
+ total=$(( ${nfiles1} + ${nfiles1} ))
+# below syntax is depriciated but it will also work ...
+#
+# total=`expr ${nfiles1} + $nfiles2`
+
+ 
+echo 'Total number of files are:' $total

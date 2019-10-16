@@ -1,0 +1,19 @@
+#!/bin/sh
+#
+# An example Bash shell script which reads two variables 
+#  as input from the keyboard and uses them .
+# Experiment with entering "quoted strings"  
+ 
+
+ echo 'Enter grid node name:' 
+#
+read grid_node
+
+ echo 'Enter path to the executable:'  
+#
+read exefil
+ 
+#  
+  echo 'Execute:' ${exefil} 'at' ${grid_node} 
+ 
+ 

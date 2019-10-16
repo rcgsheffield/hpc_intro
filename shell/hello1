@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# The first example of a shell script.
+# User is prompted for his name and greeted
+# with the name she/he provided.
+#  
+# Exercise:   
+#   Add commands that also write out your iceberg username and 
+#   also report your current filestore usage.
+# 
+echo 'Hello World'
+
+# -n means no linefeed at the end
+# -e means expand special escape characters i.e. 
+echo -en   "\n Who am I talking to? "
+read user_name
+echo -e "\n\n\n Hello $user_name \n\n\n" 
+

@@ -1,0 +1,19 @@
+#!/bin/bash
+#
+# This script gives examples of using the if statement
+# using compound tests using AND (&&) and OR (||) 
+# It also shows assigning a default value. 
+a="$1"
+a=${a:=0}
+echo $a
+if  date | grep "Fri"   &&  `date +'%H'` -gt 17  
+then
+	echo "It's Friday, it's hometime!!!"
+fi
+if [ "$a" -lt 0 ] || [ "$a" -gt 100 ] 
+then
+	echo " Limits exceeded" 
+else
+        echo " Within limits "
+fi
+ 

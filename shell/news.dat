@@ -1,0 +1,2469 @@
+*****************************************************************************
+* The news macro uses the unix 'less' command.                              *
+* Type 'h' for help, [space] for next page, can use cursor keys 'q' to exit.*
+* Iceberg NEWS is also available on the web at :                            *
+*            http://www.shef.ac.uk/wrgrid/iceberg/news.html                 *
+*         HPC&GRID COMPUTING SUPPORT pages are located at :                 *
+*                 http://www.shef.ac.uk/wrgrid/                             *
+* Documentation for most of the iceberg hosted packages and compilers are   *
+* available via http://www.shef.ac.uk/wrgrid/software                       * 
+*                                                                           *
+*****************************************************************************
+*        WELCOME TO ICEBERG :Running Sun Grid Engine                        *
+* EXCEEDED YOUR QUOTA ?  Use RM ( and not rm) to delete unwanted files.     *
+*****************************************************************************
+25-08-15 CHANGES TO THE WAY OF ACCESSING ANSYS PRODUCTS ON ICEBERG
+          We have removed the ability to run ansys related products such as
+	  fluent without having loaded a module first. 
+	  Before using any ANSYS product on an iceberg worker-node you must
+	  first type :  module load apps/ansys 
+	   
+	  If you need to use a specific version type:  
+	        module avail apps/ansys  
+	 and use the module load command for that version.
+	 e.g  module load apps/ansys/14.5 
+	 
+	 following this you can simply type one of the commands:
+	   fluent, ansys , runfluent , runansys , ansyswb , icemcfd  
+	 to pick up the version that was declared by your last module load
+	 command.	
+	  
+*****************************************************************************
+30-07-15 MAPLE updated to version 2015
+         All Maple related software is updated to the latest version (2015) 
+	 on iceberg. 
+	 The commands  maple , xmaple , mint and mhelp will now run the
+	 latest release.  
+	 Release 16 have been withdrawn due to licenses no longer supporting
+	 that version
+*****************************************************************************
+22-07-15 ANSYS Software License Server is changing.
+          ATTENTION ALL ANSYS & FLUENT users who have this software installed
+	  on their own workstations.
+          The current ANSYS licenses are due to expire by the end of July 
+	  and the new licenses are now being served from a new license server.
+
+          In order to be able to continue to use ANSYS after this month on 
+	  your workstations, you must perform the following procedure on 
+	  your workstation where you have any ANSYS product installed.
+           Run the ANSYS  Client ANSLIC_ADMIN utility as Administrator 
+        (Right click on it in the start menu and select Run as administrator)
+          Select 'Specify the license server Machine' 
+          Highlight the license server line  ( 2325 1055  licserv.shef.ac.uk )
+          Click on the 'Edit selected Server machine'  button
+          Change the Hostname 1 field to    ansyslm.shef.ac.uk
+          Click OK button
+          Click Close button
+          Close the Client ANSLIC_ADMIN utility window
+	  
+          Please note that if you use ANSYS only on Managed Windows Service 
+	  Workstations or on iceberg, you do not need to take any action.
+
+*****************************************************************************
+03-07-15 From today the default version of MATLAB on iceberg will be 2015a
+         Although typing matlab on the worker nodes will load the default
+	 version of MATLAB, it is strongly recommended to use the module 
+	 command to access MATLAB.
+	   i.e.  type  module load apps/matlab
+	 Earlier versions of MATLAB can also be accessed via the module 
+	 command. For example:   module load apps/matlab/2014a 
+	 
+	 Please see the following page for further information-
+	 rcg.group.shef.ac.uk/iceberg/software/apps/matlab.html  
+	 
+*****************************************************************************
+03-03-15 HPC@SHEFFIELD  ANNUAL HPC EVENT ON 26TH OF MARCH 
+
+         Our annually held HPC@sheffield Research Computing event will take 
+	 place on Thursday the 26th of March in Firth Hall. 
+
+         This major event is aimed at research students and staff to inspire 
+	 and inform them about many exciting research activities that are 
+	 taking place by using the local and national high performance 
+	 computing facilities.  
+
+         The emphasis of this year's event will be global "grand challenges"
+         and will feature presentations on research and research techniques 
+	 that are used to address these challenges with the aid of high 
+	 performance computing.    
+	 Registration is required and can be made via:
+	 http://www.sheffield.ac.uk/cics/hpc-sheffield 
+
+*****************************************************************************
+24-02-15 New method of accessing the popular software items on iceberg******
+
+         We are introducing a new method of access to commonly used software
+         packages such as abaqus, ansys, fluent and matlab via module
+         commands.  Type-    module avail apps      to see the currently 
+         available application module files. 
+         You will see each application with a list of maintained versions.
+         For example, to access 2013b version of MATLAB you will need to type
+                         module   load apps/matlab/2013b
+           followed by-  matlab
+         To access the latest version of abaqus on iceberg  type; 
+                         module    load  apps/abaqus 
+           followed by-  abaqus 
+         To access version 15.0 of all ansys products you will need to
+         type -        module load apps/ansys/15.0  
+         followed by -
+	           fluent, ansys, ansystext, ansyswb, icem, icemcfd or cfx  
+		   
+         For any module, if you do not specify the version number then the 
+         highest numbered version will be made available.  
+         Therefore in the above example we could have just typed 
+                  module load apps/ansys  to get the latest version (15.0) 
+
+         We shall remove the older method of access to these packages via
+         names such as ansys145 , matlab2014a   etc....
+         Further information about the module command can be found at URL
+         http://www.shef.ac.uk/wrgrid/using/modules 
+*****************************************************************************
+23-02-15 Removal of R command.
+	 The default R command which is availible on the nodes has been 
+	 replaced by the apps/R module. This old (2.15) version of R will be
+ 	 permanently deleted on the 1st April. Until then this version of R
+	 can be accessed by running `/usr/bin/R` instead of `R`.
+*****************************************************************************
+18-02-15 Removal of older software from iceberg.
+         We are starting our "spring-clean" on iceberg to remove very old 
+	 versions of software and we will make further announcement 
+	 regarding this. Abaqus Version6.5 will be one of the casualties 
+	 as we already have Versions 6.9, 6.11 , 6.12 , 6.13 on iceberg.
+	 After installing version 6.14 we will remove further older versions.
+	 Please email hpchub@sheffield.ac.uk if you depend on a version  
+	 of abaqus older than version 6.11.
+*****************************************************************************
+         SOFTWARE CARPENTRY BOOTCAMP in SHEFFIELD UNIVERSITY
+	            On 18th and 19th of MARCH
+         This two-day training event is part of the Software Carpentry 
+	 Program with hands-on experience, focusing on code development
+	 and maintenance by using MATLAB.  Spaces are limited.
+	 Follow the link below for further details and application
+	 https://sites.google.com/a/sheffield.ac.uk/hpchub/news-event
+*****************************************************************************
+04-02-15 2015 SIMULIA FORUM is taking place in INSIGNEO INSTITUTE, SHEFFIELD
+         ON 11TH OF FEBRUARY.
+         Abaqus users are strongly encouraged to attend this forum that is
+	 taking place in Sheffield University on 11th of February.
+	 For further details please see:
+	 https://sites.google.com/a/sheffield.ac.uk/hpchub/news-event
+	 
+	 To register please email : seu.uk.info@3ds.com
+
+*****************************************************************************
+03-12-14 MATLAB 2014a is now available on iceberg
+
+         The following commands can now run MATLAB 2014a and related 
+	 utilities:
+	 
+	     matlab2014a , mex2014a , mcc2014a and mbuild2014a
+	  
+	 After a short period, following another announcement we will make 
+	 2014a the default version of MATLAB on iceberg.
+	 
+
+*****************************************************************************
+27-11-14 Recent release of JAVA coupled with not yet resolved X11 related
+         problems are recently causing the following problems:
+	 INTERACTIVE JOB PROBLEMS: We are experiencing intermittent problems
+	 when attempting to start interactive job sessions via the 
+	 applications portal or via qsh from iceberg login node. 
+	 We are investigating these problems to find a resolution. 
+	 In the meanwhile, if you have problems starting interactive jobs 
+	 please log out of iceberg and log back in again until the problem 
+	 clears.
+         JAVA PROBLEMS: The latest release (i.e. Version 8) of Java has broken 
+	 the browser method of access to iceberg. See :
+	 http://www.shef.ac.uk/wrgrid/using/access/problems on how to avoid
+	 these problems. 
+
+*****************************************************************************
+20-11-14 Fluent, Ansys and icemcfd version 15.0 is now available on iceberg.
+         Commands to use are:
+         For interactive usage: fluent150 & ansys150 , icemcfd150
+         For batch jobs:     runfluent150 & runansys150
+
+         Previous versions are also available by replacing 150 with 145 for
+	 all of the above commands. 
+
+*****************************************************************************
+27-10-14 Reading and displaying PDF and PostScript files
+         Ghostview is available on iceberg headnode and worker nodes to view
+	 files written in PostScript and PDF format. 
+	   Type ghostview  or just gv  to access it on iceberg.
+	   
+	 Foxit PDF reader software is available on the worker nodes to view
+	 PDF format files. Foxit reader is freely available on both
+	 Windows and Linux platforms and tends to outperform Adobe Reader.
+	   Type foxit on worker nodes to access it.    
+*****************************************************************************
+24-10-14 The earliest version of the pgi compiler will be withdrawn ...
+         Version 10.2 of the PGI compilers module will be removed from the 
+	 system as it is no longer compatible with the upgraded 
+	 operating system on the iceberg cluster.
+	 The versions 13.1 and 14.4 are available via the module commands;
+	   module load compilers/pgi/13.1   and module load compilers/pgi 
+	 respectively.   
+*****************************************************************************
+10-10-14 Iceberg upgrade work completed successfully                 
+         All iceberg upgrade work has now been completed and the
+	 specifications of the new cluster can be viewed at:
+	 www.sheffield.ac.uk/wrgrid/iceberg/specs 
+*****************************************************************************
+05-09-14 ***** VERY IMPORTANT iceberg ANNOUNCEMENT ***** 
+
+         Our major iceberg upgrade work is starting soon. 
+ 
+         23rd Sept to 29th Sept:   NO iceberg SERVICE !!!
+	 29th Sept to  6th Oct :   Partial service provided on the AMD nodes.
+         6th October           :   Service resumes on the upgraded iceberg
+                                   cluster.
+	 As /fastdata filestorage area will also be significantly upgraded 
+         it will not be available during the entire upgrade period. Also the
+	 dedicated 'Project' queues  will be disabled during this period as 
+	 the upgrade effects the dedicated nodes. 
+	 
+	 Although we do not expect the data currently stored on /fastdata
+	 areas to be lost, there is always a risk of data loss. As CiCS takes
+	 no backups of /fastdata, we urge /fastdata users to backup their 
+	 important files that reside on /fastdata as soon as possible. 
+	  
+	 We appreciate that the loss of service will inconvenience our users
+	 but we are hoping that this will be amply compensated by the 
+	 improvements to the iceberg service as well as to /fastdata.	
+	 	   
+         Further announcements about the upgrade progress will follow.
+ 
+                                    Enquiries: hpchub@sheffield.ac.uk 
+*****************************************************************************
+29-08-14  Abaqus Version 6.13 released on iceberg.
+          Abaqus version 6.13 is now available on iceberg worker nodes. 
+	  To access the line-mode version simply type: abaqus613
+	  To access the CAE graphical interface  type: abaqus613 cae
+	  To run an abaqus batch job use: runabaqus613 
+	  NOTE: We now have flags for GPU support in runabaqus. Anyone 
+	        wishing to use the GPU acceleration should apply to be
+                a member of the GPU project.
+          We are currently working on releasing Version 6.14 as well
+                                               hpchub@sheffield.ac.uk 
+*****************************************************************************
+22-07-14  ANSYS/FLUENT/LSDYNA licenses are renewed.
+          These licenses have just been renewed for another year.
+	  We now have much increased numbers of ANSYS software licenses.
+	  This should avoid the license shortages some users encountered 
+	  during peak periods.
+	   
+	  From today onwards we have - 
+	   250 Research Licenses 
+	  2048 HPC Licenses ( for parallel usage ) 
+	  2500 Teaching Licenses (For Managed Windows usage) 
+	    25 LS-DYNA Licenses
+	                                Enquiries: hpchub@sheffield.ac.uk 
+*****************************************************************************
+20-06-14  NAG Library updated.
+          NAG Scientific Routines Library that can be called from FORTRAN 
+	  and C programs contains the most comprehensive set of numerical 
+	  algorithms that are available to the HPC community.
+	  We now have many of the implementations of this library available 
+	  on iceberg. Please use a browser to follow the link below on how
+	  to access the NAG library and examples on iceberg.
+	  
+	        http://www.shef.ac.uk/wrgrid/software/nag/
+
+*****************************************************************************
+17-06-14  foxit PDF viewer is now available on iceberg
+          Foxit is an excellent and very quick PDF file viewing utility.
+          This free software is mainly used on WINDOWS platforms as a quick
+          alternative to ADOBE Acrobat Reader. We have made the Linux version
+          available on the iceberg cluster nodes for viewing of PDF files.
+          This software seems to contain some client-dependent features which
+          results in producing spurious startup error messages, depending on
+          the method of terminal access to iceberg but continues to work well
+          To access it type :  foxit   
+          You can also type :  foxit  yourfile.pdf   to skip opening the file
+          from within the viewer.
+*****************************************************************************
+11-06-14  INTEL Compilers are updated.
+          INTEL compilers have been updated to version 14.0 on iceberg 
+	  The command: 
+	     module load compilers/intel 
+	  will now access version 14.0 of this compiler.
+	  This module will also load the java module so as to be able to 
+	  use the graphical features of the Intel debugger.
+	  
+	  If you wish to continue to use the previous version please use the
+	  command : module load compilers/intel/12.1.5 
+	   
+*****************************************************************************
+30-05-14  PGI compilers have been updated.  
+          The latest version of the PGI compilers(14.4)have been installed on
+	  iceberg cluster. The command;
+	   
+	      module load compilers/pgi 
+	      
+	  will now access the latest version (14.4) of the PGI compilers. 
+	  If you find that your programs no longer work with this version 
+	  please report to us immediately via email hpchub@sheffield.ac.uk .
+	  
+	  You can always revert back to using the previous version via the 
+	   command;    module load compilers/pgi/13.1   
+
+*****************************************************************************
+03-06-14  UPDATING the GRID ENGINE 
+          SGE software, used for submitting and controlling jobs on iceberg  
+	  by providing the 'qsub', 'qrsh', 'qsh', 'qstat'... commands will be
+	  updated on this date.
+	  Work will start at 9am and is expected to last for about 30 mins.
+	  This work should not affect any jobs that are already running when 
+	  the update starts. However it will not be possible to submit new 
+	  jobs or view or modify the status of existing jobs whilst the work 
+	  takes place.  
+          If you use the 'qmon' graphical interface to manage your jobs on 
+	  iceberg then you will notice that the interface has changed 
+	  following the upgrade, however the functionality will remain the 
+	  same.You should also check that your job scripts do not specify 
+	  the SGE_ROOT variable, as the location of this directory will 
+	  change as part of the update, and jobs referencing the old 
+	  installation will fail following the update.  
+	  In general it is no longer necessary to set SGE_ROOT as part of 
+	  your job file.
+
+          Contact hpchub@sheffield.ac.uk if you have any concerns regarding 
+	  this upgrade. 
+
+*****************************************************************************
+25-05-14  GPU COURSE on 1st JULY 2014 
+          
+          This course will introduce the background of GPU hardware and 
+	  provide hands on training for program development using the NVIDIA 
+	  CUDA programming API. The training will introduce the CUDA language 
+	  and optimisation techniques and provide guidance on how to access 
+	  GPU hardware within the University of Sheffield Iceberg cluster.
+
+          No prior parallel programming knowledge is required however 
+	  participants must be familiar with programming in C/C++.
+
+          A maximum of 20 participants is allowed on a first come first 
+	  serve basis. Registration is required using the link below:
+          http://www.archer.ac.uk/training/courses/GPUtrainer.php
+	  
+          Course date 1st July 2014 (10.00 until 16:00)
+          Location: Mappin Building Room F110
+          The course will be delivered by Dr Paul Richmond, 
+	  Dr Mike Griffiths and remotely supported by Dr Alan Gray (EPCC)
+
+*****************************************************************************
+20-05-14 /fastdata ( temporary usage area ) 
+         All the recent problems with /fastdata have been resolved.
+	 To avoid future problems we shall continue to monitor and delete 
+	 files older than 60 days on the /fastdata areas.
+*****************************************************************************
+25-04-14 FILE SYSTEM CRASH 
+         As of this afternoon /fastdata has become unusable due to a 
+         a combination of hardware/software faults.
+         Please do not use fastdata area until further notice !
+
+*****************************************************************************
+04-03-14 Matlab 2013b is installed on iceberg
+
+         Commands are: matlab2013b , mcc2013b , mex2013b and mbuil2013b 
+	 Currently Distributed Compute Engine is not available with this 
+	 version.
+*****************************************************************************
+04-03-14 Fastdata Area Residence Period is Reduced to 60 Days
+
+         To eliviate the problems due to shortage of space in the /fastdata
+	 areas we have reduced the maximum file residence period on this area
+	 from 90 days to 60 days.  Files older than 60 days on /fastdata will
+	 be automatically deleted. 
+	 We also kindly ask our users to delete any unwanted files from their 
+	 /fastdata areas to help us reduce filestore usage.
+*****************************************************************************
+03-03-14 /fastdata area on iceberg is full
+         Since the beginning of January /fastdata area of iceberg have been 
+	 so full that attempting to use these areas are beginning to cause 
+	 jobs to fail due to lack of space. 
+
+         We ask all our users to  
+	     (a) delete any unwanted files from this area  and   
+	     (b) avoid using this area until further notice. 
+
+         We are ordering more disks to increase the capacity of the /fastdata
+	 which should hopefully eliminate the current problems.  
+	 Further announcements about the progress of this order will follow.
+
+*****************************************************************************
+19-11-03 Default version of Matlab on iceberg is now 2013a
+          From today onwards the commands - 
+	  
+	       matlab, runmatlab, mex , mcc and mbuild 
+	       
+	  will be using the Matlab 2013a version.      
+
+*****************************************************************************
+08-11-13 Matlab 2013a with Parallel Computing capabilities
+
+         Matlab 2013a is currently available with the associated commands;
+	 
+	  matlab2013a , mex2013a , mcc2013a and mbuild2013a
+	  
+	 This version will be made the default version of Matlab on 11th Nov.
+	 I.e. from that date onwards the commands-
+	    matlab, mex, mcc and mbuild will access version 2013a.
+	           
+         This version can also take advantage of Matlab's parallel and GPU 
+	 processing features as well as Distributed Computing Engine features
+	 Parallel Matlab is not generally available to all users.
+	 Users wishing to use Parallel Matlab capabilities should contact 
+	 iceberg-admins@lists.shef.ac.uk stating their requirement.
+	 
+	 Please refer to www.shef.ac.uk/wrgrid/software/matlab/parallel 
+	 for iceberg implementation details.   
+*****************************************************************************
+27-08-13 FLUENT and ANSYS default version is now 14.5 
+         As of this afternoon the below list of commands will run the latest
+	 ( i.e V14.5 ) version of these software.
+	 
+     fluent, runfluent, ansys, runansys, ansyswb, ansysteach, ansys-linemode 
+	  
+	  
+	  The previos versions can be accessed via the commands- 
+	  fluent13, fluent14, runfluent13, runfluent14
+	  ansys13 , ansys14 , runansys13 , runansys14
+	  ansysteach13 , ansysteach14
+	  ansys12wb, ansys13wb , ansys14wb 
+	 
+          ansyswb  now needs minimum 7 GBytes of memory to run.
+
+*****************************************************************************
+05-08-13 Commands runansys145 and runfluent145 have been revised to have a
+         similar interface for Fluent and Ansys version:14.5.
+         runansys145 command has an extra parameter ( -gpu ) that allows the
+	 Ansys solver to take advantage of the GPU processors.
+	 Anyone wishing to use GPU processing within Ansys must email 
+	 iceberg-admins@lists.shef.ac.uk for permission to join the GPU users
+	 project group.
+	 We shall shortly make version 14.5 the default version for both 
+	 Fluent and Ansys software following a further announcement.
+	 
+*****************************************************************************
+03-07-13 Another attempt to fix the ANSYS workbench have been implemented
+         this afternoon.  Please contact iceberg-admins@lists.shef.ac.uk
+	 if you are still having problems with Ansys Workbench
+
+*****************************************************************************
+02-07-13 GPU acceleration for ANSYS Mechanical jobs are now possible
+
+         The runansys145 command now has an option to specify GPU 
+	 acceleration for Ansys "version 14.5" calculations.
+	 Type runansys145 for further details. 
+	  
+*****************************************************************************
+28-06-13 The ANSYS-WORKBENCH FIX DID NOT WORK !
+          Tuesday's software updates which attempted to fix the ANSYS
+          WORKBENCH related problems have failed to resolve these problems.
+          For now, we advise our workbench users to use it on Managed 
+          Windows machines where version 14 is installed. Or contact 
+          iceberg-admins@lists.shef.ac.uk to obtain version 14.5.7 for their 
+          own windows workstations. Apologies for continuing problems.
+*****************************************************************************
+25-06-13  A fix for the ANSYS-WORKBENCH GEOMETRY-DESIGNER component.
+
+          On Tuesday, 25th of June we will update the Sun Global Desktop(SGD)
+          software that controls the myapps portal which is used for 
+	  connecting to iceberg via an internet browser. 
+	  We apologize to ANSYS Workbench users for the continuing disruption
+	  to this software since the iceberg upgrade and ask them to test 
+	  their problems again after the fix has been implemented.
+*****************************************************************************
+14-06-13  More Ansys & Fluent licenses are now available.
+ 
+          Parallel Fluent & Ansys users will be pleased to know that we 
+	  have increased the number of available licenses after ANSYS donated
+	  extra licenses to the Insigneo Group.
+	  Research licenses went up from 100 to 130 seats.
+	  HPC licenses went up from 175 to 207 cores.
+
+*****************************************************************************
+15-05-13  PGI compilers are no longer automatically available on iceberg.
+
+          Since the recent iceberg upgrade, PGI compilers are no longer
+	  available as default on iceberg. 
+          If you are a regular PGI Fortran and C Compilers user you will now
+	  need to type:     module load compilers/pgi   
+          on the command line before using these compilers. 
+	  Better still you can add a line which reads 
+	            module load compilers/pgi 
+          into the end of your .bashrc file which will then make these 
+	  compilers available as soon as you log into a worker node 
+	   ( just like the old days). 
+
+*****************************************************************************
+09-05-13 ABAQUS V6.12 is installed on iceberg.
+         currently only the following V6.12 related commands are available:
+	 
+	  abaqus612
+	  abaqus612cae  
+	  
+	  NOTE that, due to our current graphics libraries related problems
+	  that effects ansys workbench as well, do not use the commands
+	               abaqus  cae 
+	               abaqus612  cae
+	  Instead use - 
+	               abaquscae 
+	               abaqus612cae 
+	  respectively. 
+	  Latest documents for both Abaqus V6.12 and Ansys V14.5 will be
+	  made available in due course.
+
+*****************************************************************************
+09-05-13 ANSYS & FLUENT Version 14.5 installed on iceberg. 
+         The latest versions of Fluent and Ansys are now available.
+	 To access this version use the following commands;
+	 
+	 fluent145 , runfluent145 , fluent145teach
+	 ansys145  , runansys145 
+
+         Note: fluent145teach can be used for problems upto 500,000 nodes and
+	       uses the teaching licenses which we have plenty of.  
+*****************************************************************************
+08-05-13 ****** BEWARE OF ANSYS workbech problems *****
+         Following the iceberg upgrade last week, ANSYS workbench has become
+         very unreliable. We strongly recommend Ansys and Fluent users 
+         NOT USE the ANSYS WORKBENCH until further announcements are made
+         regarding this issue.  
+         Commands fluent and ansys can be used to start these items directly.
+       
+*****************************************************************************
+23-04-13 Accessing the abaqus example input files.
+         Abaqus example input files, as referenced in the Abaqus manuals 
+	 can be copied into the users own working directory by the use of the
+	 abaqusexample  command.  
+	 When abaqusexample is issued without any parameters it lists the 
+	 entire contents of all the Abaqus examples directory which is a
+	 huge list!. You can then copy the ones you need into your directory
+	 by using the filename as the first and only parameter. 
+	  Example1:  abaqusexample boltpipeflange_axi_solidgask.inp  
+	  Example2:  abaqusexample bolt* 
+	 The first example copies a single file. 
+	 The second examples copies all the files starting with the name bolt 
+	  
+*****************************************************************************
+18-04-13 runabaqus command bug fix. 
+         an error in runabaqus command was preventing passing of the rmem 
+	 parameter correctly to the Sun Grid Engine. This has now been fixed.
+	 please type   runabaqus  on its own for further information on how
+	 to run abaqus jobs on iceberg. 
+*****************************************************************************
+04-04-13 icemcfd is updated to version 14.0 
+         IcemCFD the modelling component of ANSYS have been updated to the 
+	 release that comes with ANSYS 14.
+	 Commands on iceberg worker nodes are:
+	 
+	  icemcfd    : For the latest version of ICEM.
+	  icemdocs   : For the latest documentation on ICEM.
+	  icemcfd130 : The previous version of ICEM. 
+*****************************************************************************
+28-03-13 Raspberry Pi Experience Talk
+         On 19th of April, David Cook of Chemistry Dept. will be presenting 
+	 a talk on his success with using a Raspberry Pi device to run his 
+	 CPU intensive programs. Details and registration are available
+         via the URL:  http://raspberrypiexperience.eventbrite.co.uk/
+	 
+*****************************************************************************
+14-03-13 This year's hpc@sheffield event will take place on 15th of April 
+         in the Tapesty Room, Firth Court, University of Sheffield.
+         Places are limited and registration is required at-
+	 
+	    http://hpcsheffield2013.eventbrite.co.uk/
+
+	 This all-day event will comprise a series of presentations and a 
+	 poster session. The objective of the event is to publicise what 
+	 is available and to provide examples of what may be achieved 
+	 using the current e-Infrastructure.
+
+         The emphasis this year will be on introducing the new regional 
+	 N8 HPC Centre and demonstrating the N8 facility for science 
+	 and engineering applications using HPC.
+*****************************************************************************
+14-03-13 16:00hours. fluent and runfluent commands will be switched to using
+         version 14 from now onwards. 
+*****************************************************************************
+01-02-13 ANSYS and FLUENT license server have been updated and restarted this
+         morning so as to be able to use the latest versions of these 
+	 products. 
+	 
+*****************************************************************************
+19-02-13 FLUENT latest version (V14) related commands on iceberg
+
+         Two new commands, namely fluent14  and runfluent14 are now available
+         on iceberg. They respectively run version 14 of Fluent interactively 
+	 and in batch mode. 
+	 After a short trial period, runfluent and fluent commands will use 
+	 this latest version (V14) of Fluent rather than version 13.
+	 Access to the previous version (V13) will continue being available 
+	 via the commands:  fluent13 and runfluent13 
+*****************************************************************************
+07-02-13 National HPC Technical Training Courses  
+
+         A series of national training courses on "Parallel Programming" 
+	 given by NAG Inc. will take place here in Sheffield University, 
+         the first session starting on 13th of February.
+	 For further details and application visit:
+	  http://www.hector.ac.uk/cse/training/
+	  
+	 There is also locally provided information on: 
+	  http://www.shef.ac.uk/wrgrid/training/seminars 
+	  
+	  CUDA course is fully booked now but there are still spaces
+	  available on the MPI and OpenMP courses. 
+	  
+*****************************************************************************
+17-01-13 VACANCY: Part Time Research Computing Support Officer @ CiCS
+
+ Corporate Information and Computing Services is offering part time work to 
+ suitably qualified applicants to help support High Performance Computing 
+ and e-Research work at the University of Sheffield. 
+ The successful applicant will be based in the Research Computing Group in 
+ the Technical Services section of CiCS and will be mostly involved with
+ supporting services provided on iceberg.
+ Further details are currently available on CiCS news at:
+                                             www.shef.ac.uk/cics/news
+					     
+ Closing date for application is Friday 15th Feb 2013
+
+*****************************************************************************
+04-12-12  ANSYS version 14 is now on iceberg.
+
+          Ansys version 14 is now available for particularly  those users
+	  of ANSYS on the Managed Windows platforms who wish to transfer
+	  their projects onto iceberg. We recommend current users of ANSYS
+	  on iceberg (i.e. Version 13 users ) to not to switch to the new
+	  version as yet. This is because there is a bug corrected version
+	  14.5 which will be released shortly that will be more reliable 
+	  to move onto.  
+	   The following commands will allow access to ANSYS version 14. 
+	        ansys14       : Ansys 14
+	        ansys14wb     : Workbench with ANSYS 14
+                runansys14    : A command to submit batch jobs using Ver14.
+
+*****************************************************************************
+19-10-12  ABAQUS IS UPDATED TO VERSION 6.11
+          The default release of abaqus on iceberg is now V6.11.
+	  The previous release V6.9 can still be accessed as described below.
+	  
+	  The following commands access the latest (i.e. 6.11) version:
+	    abaqus ,  abaqusviewer , abaquscae , abaqusdoc , abaqusu 
+	   
+	  The following commands access the previous (i.e. V6.9) version:
+	    abaqus69,abaqus69viewer,abaqus69cae,abaqus69doc,abaqus69u 
+	   
+	  Abaqus jobs can be submitted to the batch queue using the commands
+	    runabaqus   : for version 6.11 jobs.
+	    runabaqus69 : for version 6.9 jobs. 
+	  Type [runabaqus] to get help on how to use it.   
+
+*****************************************************************************
+10-09-12  Abaqus will be updated to V6.11 
+          We will shortly release Abaqus V6.11 and make it the default 
+	  version. The new runabaqus command will allow running massively
+	  parallel Abaqus jobs using MPI connectivity. 
+*****************************************************************************
+08-08-12  NAG MK9 Library for the GNU C Compiler is now available on iceberg.
+          New command;
+	   gccnag      -  can be used to compile and link a C program using 
+	                 the NAG library. 
+           nagexample9 - run an example program calling MK9 library. 
+	 
+	   nagdocs     -  local "to iceberg" nag-documents browser
+	   
+	  For further comprehensive information see: 
+	     http://www.sheffield.ac.uk/wrgrid/software/nag  
+	  
+*****************************************************************************
+01-08-12  GNU C and Fortran Compilers Update ***
+          The default version of the GNU C & Fortran compilers on iceberg is 
+	  (4.1.2) which is rather out-of-date now. 
+	  More recent version (4.5.3) of these compilers are available 'and 
+	  recommended' via the command: 
+	        module load compilers/gcc
+	  Following a successful module load command
+	  c++, cpp, gcc , g++ and gfortran commands will access the latest
+	  versions. 
+	  See  (man gcc) & (man gfortran)  for further information
+
+*****************************************************************************
+01-08-12  We have temporary ANSYS licenses and are waiting for the permanent
+          licenses to arrive towards the end of this week.
+*****************************************************************************
+29-07-12  Fluent and ANSYS licenses will be renewed tomorrow morning.
+          Our Fluent&Ansys licenses that are due to expire shortly, will be
+          renewed tomorrow "Monday" morning.
+*****************************************************************************
+24-07-12  NAG MK21 library for the PGI compilers will shortly be withdrawn.
+
+          MK22 for PGI compilers has been available for  over a year now on 
+	       iceberg replacing MK21.
+	  MK23 version of the NAG library is also made available for use by
+	       the Intel compiler only. 
+	  We shall release the MK23 of NAG for PGI compilers when it becomes
+               available later this year.
+          NAG Documentation via the wrgid pages will also shortly be updated
+	  The test programs for the NAG library are available via the 
+	  following commands:
+	    nagexample22   ( uses the PGI Compiler )
+	    nagexample23   ( uses the Intel Compiler)
+	    
+	  To compile a Fortran program calling NAG using the PGI compiler:   
+	    pgf90 program.f -lnag
+	  To compile a Fortan program calling NAG using the INTEL compiler:
+	    ifort program.f -lnagi23 
+	  
+	
+*****************************************************************************
+20-07-12  Latest version(12.1.15) of the Intel Compilers Installed on iceberg
+          To access this version use the command; 
+	  
+	    module load compilers/intel/12.1.15
+	    
+	  Latest NAG library MK 23 for this compiler is also installed.
+	  To access the NAG library routines using the INTEL Fortran Compiler
+	   use the -lnagi23 flag. 
+	   
+	  example:   ifort myprog.f -lnagi23  
+	   
+          Further announcements about documentation and examples will follow
+                                 Report problems to  D.Savas@sheffield.ac.uk
+*****************************************************************************
+20-07-12 iceberg SHUTDOWN for maintenance on Thursday the 26th of July.
+         Due to mains-power-supply testing and maintenance to the computer 
+	 centre the intel nodes of the iceberg cluster will be powered down
+         at 10.00am on 26.July.2012. The AMD nodes should not be effected
+	 by this maintenance. The maintenance work is estimated to last 
+	 only about an hour. 
+*****************************************************************************
+16-07-12 ANNUAL NAG Library updates will take place soon.
+         During the next week NAG, library licenses, which are due to expire
+	 at the end of this month will be renewed and where possible the
+	 NAG libraries will be updated to the latest versions on iceberg.
+	 There will be further announcements to follow via news and twitter.
+
+*****************************************************************************
+08-06-12 Matlab 2012a is now available on iceberg.
+         The commands to access the new version are: 
+	 
+	      matlab2012a , mex2012a , mcc2012a , mbuild2012a  
+	      
+*****************************************************************************
+06-06-12 Maple version 16 is now the default version on iceberg.
+         On iceberg, the commands maple, xmaple, mint and maplehelp now
+	 run Version 16  (See earlier news item dated 16-05-12 ) . 
+*****************************************************************************
+31-05-12 16:20 ABAQUS SERVICE RESTORED  
+         Abaqus is also available after the license server restore.
+*****************************************************************************
+31-05-12 15:14 MAPLE service on iceberg is restored.
+         Following the failure of a license server machine, Maple licenses
+	 are now being served from another server and the Maple service on 
+	 iceberg is restored. 
+*****************************************************************************
+31-05-12 ABAQUS and MAPLE is not available due to license server crash 
+         A major hardware fault on one of the license server machines is
+	 currently effecting MAPLE and ABAQUS service.
+	 Until the issue is resolved it will be not be possible to run 
+	 abaqus and maple jobs on iceberg.
+	 Further announcements will follow. 
+*****************************************************************************
+30-05-12 runfluent command has been updated to allow specifying the [-rmem=] 
+         real-memory requirements of a fluent job.  Type runfluent on its own
+	 for information on how to use it. 
+	 
+*****************************************************************************
+25-05-12 CFX commands now run version 13 by default.
+         Commands  cfx  cfxhelp cfx5solve  now access version 13. 
+	 Previous version(12) is still available via:  cfx12 and cfx12help .
+*****************************************************************************
+16-05-12 Maple 16 is now available on iceberg.
+         The latest release of Maple ( Version 16 ) is available for access
+	 on the iceberg cluster. Although we recommend the use of the latest
+	 version, we will continue to make versions 14 & 15 available
+	 for another year. During next week, the commands xmaple, maple and 
+	 mint will be switched over from version 15 to 16. 
+	  Commands Summary: 
+	  maplehelp : Maple help system ( requires GUI interface ) 
+	  xmaple, xmaple16, xmaple15, xmaple14 : GUI interface of Maple.
+	  maple  , maple16 , maple15,  maple14 : Command-line interface.
+	  mint ,  , mint16  , mint15            : Maple debugger.
+	  
+	 There are also the following Version-10 related commands: 
+	  xmaple10, maple10 , mint10.
+	 Version 10 is an old release but it has the advantage of not 
+	 relying on our floating license server and hence will still be
+	 available in the rare event of a license server outage.   
+*****************************************************************************
+04-05-12 Improvements to the job scheduler.
+         On 14th of May we will be changing a few parameters of "SGE" the 
+	 Job Scheduler on iceberg to improve our service. 
+	 Full details of the changes will be emailed to all iceberg users 
+	 within the next few days, as well as new announcements via news. 
+*****************************************************************************
+02-05-12 LSDYNA 
+         LsDyna package has been accessible in NON-GUI mode via the command 
+	 lsdyna12  for over a year now.  
+	 For those who prefer a GUI interface, a new command named lsdyna 
+	 can now be used to access LSDYNA in graphical mode.  
+*****************************************************************************
+27-04-12 CHANGE OF DATE for the upcoming HPC WORKSHOP
+         Due to unforseen circumstances the date for this workshop have been
+	 moved from 3rd of May to 10th of May. Venue and timing remains 
+	 the same.
+*****************************************************************************
+20-04-12 11:00am . This morning fastdata filesystem failed. This has now
+         been resolved and fastdata is working normally again.
+*****************************************************************************
+18-04-12 From tomorrow, by default matlab command will use the 2011b version
+         of Matlab. Matlab 2011a is still available via command matlab2011a 
+*****************************************************************************
+19-03-12 CFD Modelling component of ANSYS & FLUENT is made available on  
+         iceberg.  
+           commands are :  icemcfd     &  icemdocs  
+*****************************************************************************
+13-03-12 ABAQUS RELATED CHANGES
+         During this month we are intending to remove the earlier version
+	 of abaqus (V6.5 ) from iceberg in preparation for installing the 
+	 latest version ( V6.11 ). Version 6.9 will continue to be available
+	 for the forseeable future. 
+	 
+	 Effected commands are: abaqus65 , abaqus65doc , abaqusopenmp65 ,
+	 abaquspost65  abaquscae65, abaqusu65 , abaqusviewer65.
+	 
+	 Replacement commands are: abaqus69 , abaqusdoc , runabaqus
+	               abaquscae , abaqusu , abaqusviewer
+	 
+	 Please contact iceberg-admins@lists.shef.ac.uk immediately if you 
+	 do not wish version 6.5 of abaqus to be removed.
+*****************************************************************************
+22-02-12 UPCOMING EVENTS
+         HPC WORKSHOP  :3rd May, 2012
+	                Introducing iceberg and overview of the new cluster
+			nodes and the new storage system.
+         HPC@Sheffield :4th April , 2012
+                        Showcasing the HPC facilities in Sheffield University
+         Please see:   www.sheffield.ac.uk/wrgrid/events for registration and
+                     further information. 
+*****************************************************************************
+09-02-12 The experimental service for easy access to iceberg becomes live on
+         13th February under the URL: 
+                     myapps.shef.ac.uk  
+         Pointing your browser to this URL will allow full graphical access 
+         to iceberg without any need for Exceed software or VPN connections.
+         Users of the experimental service via xentest1.shef.ac.uk should
+         now use this new permanent URL instead. 
+*****************************************************************************
+07-02-12 Minor system changes for Fluent users.
+         From now on Fluent jobs submitted to the batch system by using the
+         runfluent or runfluent13 commands will have all the normal and error
+         output directed to a single (.o ) file. e.g. fluent13job.onnnnnn
+         where nnnnnn is the job number.
+         Also, a new command called run-fluent is now available for running
+         small-sized 'i.e. upto 500,000 nodes' Fluent jobs.
+         run-fluent has the same parameter as runfluent but uses our teaching
+         licenses. 
+         Use   run-fluent for small-sized jobs
+         Use   runfluent for jobs that require greater than 500,000 nodes. 
+*****************************************************************************
+31-01-12 Ansys License server will be upgraded on Friday the 3rd of February
+         between 9:00-10:00 am in preparation for supporting the future 
+         versions of Ansys.
+         There may be a short interruption to ANSYS/FLUENT service during
+         that period.
+*****************************************************************************
+18-12-12 MATLAB 2011b is now available on iceberg
+         The latest production release of Matlab "i.e 2011b" is available on 
+	 all iceberg worker nodes via the command  [matlab2011b]
+	   Until further notice the default version of Matlab that is 
+	 accessible via the [matlab] and [runmatlab] commands will remain to 
+	 be Matlab 2011a release.
+	 
+*****************************************************************************
+13-12-11 **** Default job memory alloactions *******
+	 From 10am on 14-12-11 the default memory allocated to a job will be
+	 reduced from 4GB to 2GB. You can still use the -l mem=xxG option to
+	 request more memory for your job if you require it, up to a maximum
+	 of 48GB.
+*****************************************************************************
+06-12-11 **** NETWORK PROBLEMS CONTINUING *********
+         We are still having intermittent problems with the network switches
+	 in the new iceberg cluster configuration which caused more jobs to
+	 fail today. We are still working to resolve these problems.
+	 Please accept our appologies while we get the new configuration
+	 working properly. Thank you all for your patience. 
+	       On behalf of the iceberg administrators team, Deniz Savas. 
+*****************************************************************************
+05-12-11 *** Possible failure of MPI jobs during this morning and lunchtime**
+         An unexpected network outage during iceberg upgrade work might have
+	 adversely affected particularly the MPI jobs. If your job has failed
+         with unexpected errors during this period please rerun it again and
+	 let us know if the errors still persist.
+	                                    iceberg-admins@lists.shef.ac.uk
+*****************************************************************************
+05-12-11 **** UPDATE on Ansys Workbench Problems ****
+         The fault while running ANSYS Workbench on the older AMD nodes have
+	 now been fixed and ansyswb is available on all hardware.
+         Therefore there is no longer any need to specify the -l arch=intel*
+	 on the qsh command.   
+         
+*****************************************************************************
+11-11-11 HPC Courses for this year now include "GPU programming"
+
+         The following two HPC related courses are scheduled; 
+	 ------------------------ 
+        "Techniques for HPC" Course 
+         This year, MPI part of the High Performance Computing Techniques 
+	 Course(CIC6003) will be presented by NAG Inc. with practicals 
+	 taking place on HECTOR in the National Super Computing Centre. 
+         Further details of this Sheffield Univ. course can be found at; 
+	 
+            http://www.sheffield.ac.uk/wrgrid/training/ddpmod#hpc2
+	 -------------------------  
+	 "Introduction to GPU programming using CUDA" 
+	 This is a brand new course on GPU programming.It is not yet a
+	 DDP module and early application is advisable to reserve a place.
+	 See:  http://www.sheffield.ac.uk/wrgrid/training/ddpmod#gpu 
+	       for further details.
+******************************************************************************
+24-10-11 Fortran Course starting shortly ....
+         The annual Fortran course starts next week ( Tuesday the 1st of Nov)
+         at 9:30am in Room K17 of Hicks Building. 
+         The full time-table of the HPC training courses are available via; 
+           http://www.sheffield.ac.uk/wrgrid/training/timetable
+         You may register via the link;
+           http://www.sheffield.ac.uk/wrgrid/training/register
+         Although these are RTP modules, you may register to attend only 
+         via the link for NON-DDP applications on that page. 
+*****************************************************************************
+14-10-11 License server issues 
+
+         Floating license server had to be restarted on 4:00am and 8:30am 
+	 today to clear problems relating to ArcGIS. 
+	 This may have effected some long running Ansys, Fluent and Matlab 
+	 jobs on iceberg as they use the floating licenses supplied by this 
+         server.	  
+ 
+*****************************************************************************
+11-10-11 As of 4pm today, fluent command runs version 13 instead of the 
+         previous version (12).Similarly runfluent now submits ver.13 jobs.
+	 Previous version is still available via fluent12 and runfluent12
+	 commands.
+*****************************************************************************
+07-10-11 Another terminal emulator ( rxvt) is installed on iceberg. 
+         rxvt is a faster 'but trimmed down' version of xterm
+	 that may respond better on slower connections and is available
+	 on iceberg head and worker also the nodes.
+	   type:   rxvt &     to check it out.
+	   type:   rxvt -help for information on usage parameters.
+*****************************************************************************
+29-09-11 FLuent Version 13 is available and will be made the default version
+         in a weeks time.
+	   The following commands are available;
+	    fluent       : Default version of Fluent
+	    fluent13     : Version 13 of Fluent
+	    fluent12     : Version 12 of Fluent
+	    fluent-teach : Default teaching version of Fluent 
+	    fluent13teach : Teaching using V13
+	    fluent12teach : Teaching using V12
+	    runfluent    : Submit a Fluent batch job using default version.
+	    runfluent13  : Submit Fluent V13 job
+	    runfluent12  : Submit Fluent V12 job
+	NOTE1: Default version is currently 12 but will very soon be 13  
+	       following another news announcement.
+	NOTE2: The only difference between the teaching version and the 
+	      full version is the number of cells that can be handled.
+	      Teaching version can handle only upto 500,000 cells
+	      but because it is smaller it will run more efficiently and    
+              without the risk of running out of licenses.
+*****************************************************************************
+23-09-11 Default version of ANSYS is now V13.
+         ANSYS Version 13 is installed and available on iceberg.
+         Although the previous version (V12) remains available with no plans
+         to remove it yet, we recommend ANSYS users to move onto the new
+         version for greater stability.
+          The following is a list of Ansys related commands on iceberg; 
+
+         ansyswb ( or ansys13wb ): Ansys 13 Workbench
+         ansys                   : Ansys version 13 (With GUI interface ),
+         ansys13                 : Ansys 13 (Line-mode interface),
+         ansys12wb               : Ansys 12 Workbench,
+         ansys12                 : Ansys 12 (Line-mode interface), 
+         runansys                : Submit an Ansys 13 batch job,
+         runansys12              : Submit an Ansys 12 batch job,
+         ansysteach              : Run teaching version of V13 (with GUI)
+         ansysteach12            : Run teaching version of V12 (with GUI)
+    Note: We have large numbers of teaching licenses for running problems
+          of upto 500,000 nodes in size on Linux or Windows platforms.          
+*****************************************************************************
+23-09-11 Default version of Matlab is now 2011a on iceberg cluster.
+         As of this morning, matlab command on the worker nodes will invoke
+         2011a ( rather than the previous 2010b ) version of Matlab. 
+         This should have no visible effect on Matlab users but let us know
+         if that is not the case for you. 
+         Also Matlab related commands mex and mbuild now use version 2011a.
+         Version 2010b is still available via the command:  matlab2010b  
+          and the associated commands mex2010b & mbuild2010b 
+*****************************************************************************
+24-08-11 Timing your runs.
+         A perennial problem for many iceberg users have been the task of 
+	 timing their tasks so as to estimate the time needed for production
+	 runs. We now have a command named (timeused) to make this easier.
+	 
+	 Just type   timeused for further information on using this command.
+	 
+	 From today onwards,users of runabaqus, runansys and runfluent 
+	 will automatically get the real-time-used reported at the end of
+	 their job output files.
+	                     
+*****************************************************************************
+23-08-11 Submitting ANSYS jobs on iceberg.
+         A new command named runansys is made available for submitting ANSYS
+         batch jobs on iceberg. Users are recommended to use this command 
+         for submitting ANSYS jobs to run in BATCH mode ( rather than the 
+	 method prescribed in ANSYS manuals ) . 
+	   
+	  Example usage1:   runansys  ansys_input_file 
+	  
+	  Example usage 2  (a big jobs requiring say 6G Bytes of memory):
+	    
+	    runansys ansys_input_file -mem=6G 
+	   and provide an extra parameter to ansys as -m=4000 when asked
+	   to do so.
+	  
+	 Type runansys on its own for further information.
+	  
+	  
+	                         Report problems to D.Savas@sheffield.ac.uk           
+*****************************************************************************
+03-08-11 Using the Fortran NAG MK22 Library with the Intel Compilers ********
+
+         NAG MK22 Numerical Routines Library can now be used with the 
+         Intel compilers as as well the previously available PGI compilers.
+          To compile a Fortan program ( for example test.f ) that calls one
+         or more NAG routines you need to use the following commands;  
+          - By using the pgi Compiler :  pgf90 test.f -lnag22 
+          - By using the Intel Compiler :  ifortnag test.f  
+*****************************************************************************
+29-07-11 Maple is updated to the latest version (i.e. 15 ) on iceberg
+
+         The following commands will access Maple 15 -
+         maple  : command-line interface to Maple15
+         xmaple : graphical  interface to  Maple15
+         mint   : maple program analyser ( i.e. lint for maple )
+         mhelp  : on-line maple documentation
+*****************************************************************************
+19-07-11 Maple software is due to be updated to version 15.
+         Within the next two weeks, maple licenses will be renewed and the 
+         latest version ( ver 15 ) will be made available on iceberg.
+         The previous version(14) will continue to be available but the 
+         earlier versions 12 and 13 will be withdrawn. 
+         We still have a historic version ( version 10)  on iceberg due to
+         the fact that it was not license controlled and hence remained 
+         available. After the changes the following commands on iceberg
+         will allow access to maple;
+            maple & xmaple  : Run maple ver.15 in console or graphics mode
+            maple14 & xmaple14 :  version 14 in console or graphics mode
+            maple10 & xmaple10 :  version 10 in console or graphics mode
+         Further announcements will follow.
+*****************************************************************************
+03-06-11  Stata is available on iceberg worker nodes
+          Commands are;
+	      stata   =  line-mode 
+              xstata  =  XWindows-mode 
+*****************************************************************************
+02-06-11  Matlab 2011a is installed on iceberg.
+          The very latest version of Matlab is now installed on iceberg.
+          Currently the relevant matlab 20011a commands are accessible via
+          their names followed by the version number(i.e.2011a) on 
+          all the worker nodes. 
+          i.e.    
+            matlab2011a  , mcc2011a,  mex2011a,  mbuild2011a
+*****************************************************************************
+16-05-11  False ANSYS and FLUENT license expiry message.
+          All Fluent & Ansys users have started receiving messages about 
+	  the imminent expiry of licenses on 31st of May. 
+	  This unfortunate 'FALSE WARNING' is due to the LSDYNA software
+	  licenses that are served by the same license server that are due 
+	  to expire on that date, but should not effect the Fluent and Ansys
+	  users. 
+*****************************************************************************
+13-05-11  Matlab related changes taking place this evening:
+
+          Command {matlab} will now invoke Matlab 2010bSP1 by default.
+          Matlab license server will be restarted to serve licenses for 
+          the latest version. There may be a brief interruption to Matlab
+          services during the license update period.
+	  Latest set of Matlab commands are;
+            matlab  ( or matlab2010b )  for Matlab 2010b  Service Pack 1. 
+            matlab2010a                 for Matlab 2010a
+            matlab2009a                 for  Matlab 2009a
+            matlab71                    for Version 7.1 ( 2005 release ) 
+*****************************************************************************
+20-04-11  Java Engines available on the worker nodes
+
+          By default version 1.5 of Java is readily available on the worker 
+	  nodes. A more recent version of Java (1.6) can also be made 
+	  available for use on the worker nodes by issuing the command; 
+	  
+	    source use-java1.6 
+	        
+*****************************************************************************
+20-04-11  MPI Parallel Programming environments *******
+          Parallel Programming on iceberg using MPI can be achieved by a
+	  number of different ways depending on the compiler and transport
+	  mechanism used. To make life easier for iceberg users we now have 
+	  a command named USEMPI that helps setup the user environment for 
+	  a particular way of MPI programming.
+	  This command must be invoked as [ source usempi ] and takes three
+	  parameters. For example; source usempi pgi openmpi infiniband
+	  
+	  Type; source usempi   to find out all the available options.
+	                                            
+*****************************************************************************
+14-04-11  Gnu Fortran & C compilers-later versions are available on iceberg
+
+          By default Version 4.1.2 of the GNU Fortran and GNU C compilers are 
+	  readily available on iceberg (Use commands: gcc & gfortran )
+	  More recent version (i.e. V4.5.1) of these two compilers can also  
+          accessed on iceberg after issuing either of the commands- 
+	       source use-gfortran45
+	   or  source use-gcc45
+	    Subsequent uses of gcc and gfortran commands will access the 
+	   more recent version. Also the subsequent man gcc and man gfortran 
+	   commands will give information about version 4.5.1 of these 
+	   compilers.  If not sure about which version you are accessing 
+	   type       gcc -v to find out the version no. 
+	                                           D.Savas@sheffield.ac.uk
+*****************************************************************************
+06-04-11  Fluent/Ansys Research licenses have been increased from 100 to 125
+          and the license server restarted at 7:50 this morning. 
+	  Also the command [fluent] now runs the teaching version of Fluent.
+	  Research version of Fluent can still be run by using the command 
+	  [fluent12] instead of [fluent] 
+	  The only difference between the Research and Teaching versions is
+	  the limit on the number of cells which is 512,000 for the Teaching 
+	  version but is not limited by the Research version. 
+	  We have a lot of teaching licenses and a limited number of research
+	  licenses. It is therefore strongly encouraged to use the teaching 
+	  licenses if your problem size is below 512K cells. 
+	  i.e. use [fluent] first and if you hit size limits use [fluent12]
+*****************************************************************************
+05-04-11  Matlab 2010b Service Pack 1 is installed on iceberg.
+          This is the March 2011 service pack update of 2010b release.
+	  To access this latest version of Matlab type : matlab2010b 
+	                              Report problems to: D.Savas@shef.ac.uk
+*****************************************************************************
+05-04-11  Excessive demand on fluent and ansys research licenses.
+          There is too much demand on fluent and ansys today that 
+          are causing us to hit the limits of our licenses.
+          Please try using fluenteach  or ansysteach commands to use the 
+          teaching licenses if fluent and ansys commands complain 
+          about shortage of licenses.  
+*****************************************************************************
+31-03-11  Fluent & Ansys License server updates causing interruption
+
+          Early this morning we updated the ansys license server so as to be 
+	  able to be able to move to version 13 in the near future. 
+	  This has caused interruption to some Fluent and Ansys batch jobs 
+	  on the iceberg cluster. If your job failed between 8.00am and 
+	  9.15am this morning with licensing problems, please resubmit them. 
+*****************************************************************************
+28-03-11  Older version of ANSYS (ANSYS11) is withdrawn from iceberg.
+          Licenses for the older version of ANSYS has finally run out 
+	  and can no longer be used. 
+	  Command [ansys] now accesses version 12 instead of version 11
+*****************************************************************************
+23-03-11  Early this morning the license server machine serving licenses
+          for Fluent, Ansys, Gambit and Matlab went down and had to be 
+	  restarted. This has affected particularly the over-night Fluent
+	  jobs. All are back to normal now. Appologies. 
+*****************************************************************************
+18-03-11  Problems with ANSYS WORKBENCH
+          A problem has been located with ansys workbench (ansys12wb command)
+	  that causes the workbench to abort abruptly due to memory limits.
+	  To circumvent these problems please run all interactive ansys
+	  workbench jobs by using larger memory as shown below;
+	   1- Start a 6 GByte memory interactive session;
+	       Qsh -l mem=6G 
+	       
+	   2- Run workbench as normal  
+	       ansys12wb ( or ansys12wbteach for the teaching version ) 
+	  
+	                        Please report problems to D.Savas@shef.ac.uk
+*****************************************************************************
+10-03-11  Updating the Gambit licenses
+          Gambit Licenses which were due to expire shortly have been renewed
+	  and are being updated this afternoon. The new Gambit licenses will
+	  expire during September 2011.
+	                       
+*****************************************************************************
+14-02-11 runfluent command now has an extra optional parameter for emailing.
+         You can receive email messages about the progress of your jobs
+         by adding the parameter  -mail your_email_address  to runfluent. 
+         This will send an email to the mail_address specified when your 
+         job starts stops or aborts.
+          Example:  runfluent 3d flight.jou -mail J.Bloggs@sheffield.ac.uk
+
+         Type runfluent without any parameters for full help on usage. 
+
+*****************************************************************************
+27-01-11 New commands for running LSDYNA and also the teaching versions of
+         Fluent and ANSYS are now available on iceberg.
+           To run LSDYNA  please use the command : lsdyna12 
+           For the Teaching versions of Ansys Workbench use: ansys12wbteach
+           For the Research version of Ansys Workbench use: ansys12wb
+           For the Teaching version of Fluent  use: fluent12teach
+           For the Research version of Fluent  use: fluent12
+        The runfluent command will continue to use the research version.
+*****************************************************************************
+02-10-10 LAST DAY OF FLUENT 6.3  ( Gambit remains uneffected )
+         From tonight it will no longer be possible to run Fluent 6.3  
+         on iceberg. fluent script will automatically point to fluent12 
+         'the latest version of Fluent' . 
+         Similarly, runfluent will use the latest version of fluent.
+*****************************************************************************
+25-10-10 FORTRAN COURSE starting shortly.
+         Fortran90 Programming course for this academic year will be starting 
+	 on Tuesday the 2nd of November at 9:30am. See full time-table at URL
+	 
+	 http://www.sheffield.ac.uk/wrgrid/training/timetable.html
+	 
+         If you are interested in attending please inform the course tutor 
+	 Dr Deniz Savas ( D.Savas@sheffield.ac.uk ) as soon as possible. 
+*****************************************************************************
+20-10-10 IMPORTANT CHANGE: Fluent 6.3 service is terminating on 1st of Nov.
+ 
+         From 1st of November onwards only the latest version of Fluent 
+	 ( i.e. 12.1 ) will be available on all campus machines including
+	 iceberg. Our old Fluent licenses will run out and not be renewed. 
+	 
+	 Only the commands runfluent12 and fluent12 will work on iceberg.
+	 Only ANSYS / FLuent12 will work on the Managed XP machines.
+	 GAMBIT will continue to be available on all platforms until further 
+	 notice. 
+	 
+	 From 1st of November onwards runfluent and fluent commands will
+	 run version 12.1 of Fluent instead of version 6.3 .
+                                  
+*****************************************************************************
+16-10-10 Parallel version of fluent12.1 is now working.  
+         Fluent12.1 can now be used in parallel mode via the runfluent12
+	 command.   
+	 It now also has an extra ability to choose between two interconnect
+	 options, namely; 
+	    - Infiniband method : Fastest , but these nodes are heavily in
+	                          demand so may have to wait longer on queues
+	    - Gigabit Ethernet  : Not as fast but available on all nodes, 
+	                          hence will not have to wait as long before
+				  your jobs can be started.
+	 When a runfluent12 job gets submitted, if you use the -t parameter
+	 to specify parallel working, you will be asked to choose between
+	 these two options. 
+	 Type runfluent12  on its own for more info.
+	 Within the next two weeks we will replace all fluent 6.3 software
+	 on iceberg with fluent 12.1. runfluent command will then run 
+	 version 12.1 instead of version 6.3.
+	              Please report problems to iceberg-admins@shef.ac.uk
+*****************************************************************************
+13-10-10 Please use runfluent12 instead of runfluent to run your fluent jobs
+          **** We have insufficient numbers of Fluent 6.3 licenses ***
+
+         The latest version of Fluent (12.1) is meant to be compatible with
+         the earlier versions.So,if you are already using runfluent to 
+         submit your jobs, you can now run them by using runfluent12 instead.
+         runfluent12 has exactly the same parameters as runfluent. As we 
+         have plenty of licenses for version 12.1 there will be very little 
+         risk of not being able to obtain licences for your job as it has
+         been happening with Fluent 6.3 recently.
+             Please report problems with runfluent12 to D.Savas@shef.ac.uk
+*****************************************************************************
+08-10-10 MORE UPDATE : A problem that stopped batch fluent jobs working
+         have recently been highlighted and resolved. 
+	 If you were having problems with submitting batch Fluent 6.3 jobs
+	 please try again and let D.Savas@shef.ac.uk know if you are still
+	 having problems. ( i.e. runfluent should work now! )
+*****************************************************************************
+23-09-10 FINAL UPDATE: All outstanding issues with Fluent 6.3 and Gambit have 
+         now been resolved.
+	 Also the latest version of Fluent and Ansys are now available.
+         New commands are;
+         fluent12   : to run Fluent 12.1
+         ansys12wb  : to run latest version of Ansys/Fluent workbench. 
+	  
+	 Our thanks to Fluent and Gambit users for their patience.
+                                                    D.Savas@sheffield.ac.uk
+*****************************************************************************
+22-09-10 UPDATE: Latest situation with Fluent/ANSYS problems.
+         We have temporarily disabled fluent6.3 due to major system problems.
+	 A security patch is expected within a day (or two) to fix problems
+	 so that Fluent 6.3 can be made available again. 
+	 
+	 We have resolved all known problems with Ansys12.1 and Fluent12.1.
+	 
+	 Fluent12.1 is the latest version of Fluent and should be fully
+	 compatible with Fluent 6.3. 
+	 Therefore we recommend all fluent users to use fluent12.1 instead. 
+	 To access it simply type -   fluent12   on a worker node.
+	 
+	 Fluent12.1 can also be accessed via the latest Ansys Workbench.
+	 To run ansys workbench just type  ansys12wb .
+ 
+*****************************************************************************
+20-09-10 Maple is upgraded from version 13 to version 14.
+         The latest version of Maple (V14) is now the default version for
+         xmaple and maple commands. 
+         The previous version(13) can still be accessed via the maple13 and 
+         xmaple13 commands but until the below mentioned kernel upgrade, it 
+         will not be possible to use it.
+                                                D.Savas@sheffield.ac.uk
+*****************************************************************************
+20-09-10 Urgent Security Patch to iceberg cluster.
+           Due to recently exposed major operating system vulnarabilities 
+         we have been forced to make changes which disable the the 32-bit 
+         compatibility libraries.
+          Licensed applications have been tested and Maple13 and LS-Dyna are 
+         the only ones that seem to be effected.
+          Until a Unix-kernel upgrade becomes available, which is expected 
+         soon there may be problems for software using the compatibility mode
+         libraries. 
+*****************************************************************************
+20-09-10 ANSYS/Fluent Seminar in Sheffield University on 21st of September.
+         This event by the White Rose Grid E-Science Centre will take place 
+	 in LECTURE THEATRE-C of HICKS BUILDING. 
+	 
+	 The agenda is as follows;
+         9.30 : Welcome and Introduction to ANSYS
+                Brief company background
+                Academic outline
+                Quick usage examples
+        10.00 : An overview of the advantages of version 12 and beyond
+                Design Modeller & AMP
+                Workbench
+                Migration strategy and caveats
+        11.00   Break & Questions
+        11.30   User Presentations: 
+                   Dr A. Al-Zahawi Benign Resin Bonded All-Ceramic Fixed 
+		      Partlal Denture Designs
+                   Louise Danao Wind turbine research at the University 
+		   of Sheffield
+                   Presentation(s) From Leeds University
+        1.00pm Lunch & Questions 
+        2.00   Further user presentations
+                 Jordan MacInness An Industrial CFD Package 
+		  in an Academic Setting
+                 Dr Q. Chen Research Applications of CFD
+                 Presentation(s) From Leeds University
+        3.30   Summary presentation & Close
+
+	                                  wrgrid-training@sheffield.ac.uk
+****************************************************************************
+01-09-10 NEWS FLASH: ANSYS12.1 is released for testing.
+         ANSYS 12.1 WORKBENCH , ANSYS 12.1 and FLUENT12.1 are now available
+	 on iceberg for testing. All being well these software items will
+	 replace the current versions of Fluent & Ansys on iceberg within
+	 next two weeks. GAMBIT is also available under the ANSYS WORKBENCH.
+	  The new commands are:
+	     runfluent12   ( on head-node and worker nodes )
+	     fluent12      ( on worker-nodes )
+	     ansys12       ( on worker-nodes )
+	     ansys12wb     ( worker-nodes,Ansys workbench with everything!)
+	     
+	                                           D.Savas@sheffield.ac.uk  
+*****************************************************************************
+17-08-10 Fluent Licenses are renewed till 22 of September.
+         Next release of Fluent and GAMBIT will be provided under the ANSYS
+	 workbench. 
+	 There will be an ANSYS presentation on 21st of September at 
+	 Sheffield University on the use of ANSYS workbench.
+	 Venue and other details will be announced soon.
+*****************************************************************************
+05-08-10 Maple version 14 is now installed on iceberg. Please type 
+         maple14 or xmaple14 to access the new version. 
+         After a successful trial period this will become the default version
+
+*****************************************************************************
+21-06-10 Having problems with your Linux environment? 
+         If you find that your prompt has changed and you can no longer 
+	 access some Linux commands and utilities it is very likely that
+	 you have deleted your .bashrc file while you were tidying up your
+	 filestore.
+	  The cure is to type [resetenv]  followed by [bash] and you should
+	 be back to normal with your .bashrc file recreated. The new .bashrc 
+	 file will of course have lost any edits you may have previous done
+	 to it.
+	
+*****************************************************************************
+05-05-10 Fluent License server is about to be updated. 
+         We have started moving the Fluent license server to a new machine.
+         During the transition period if you do have problems with licenses
+         when using the fluent and runfluent commands please use the 
+         following alternatives: 
+               fluent.licserv1 
+               runfluent.licserv1
+*****************************************************************************
+05-05-10 Corporate Information and Computing Services is offering part time 
+         work to suitably qualified applicants to help support High 
+         Performance Computing and e-Science work at the University of 
+         Sheffield. 
+         The successful applicant will be based in the Research Computing 
+         Group in the Technical Services section of CiCS.
+         __Terms__
+         Hourly paid, with rate in the range £10.82 to £15.42 per hour 
+         depending on experience. Up to 86 days work is available, over a 
+         period of 17 months (average of 5 days per month).Will be required 
+         to complete a time sheet which should be submitted monthly
+         Terms and conditions for casual staff apply.
+         __Duties__
+         Can contain some but not all of the below:
+         (1) Attend research computing group meetings
+         (2) Software maintenance on iceberg.
+         (3) License maintenance for software on iceberg
+         (4) User support for iceberg users and Exceed users.
+         (5) Maintenance of the WRGRID pages under Content Management
+             Sheffield WRGRID pages are in: http://www.shef.ac.uk/wrgrid/
+         (6) Maintenance of the Web based documentation on iceberg
+         (7) Training Related work
+         (8) General user support for Matlab, Maple, Fluent users 
+          __Contacts for queries__
+          Dr Mike Griffiths     m.griffiths@shef.ac.uk,     ext 21126
+       or Dr Deniz Savas        d.savas@shef.ac.uk,         ext 23023
+         __Applications__
+         Please send a CV and covering letter to:
+         Mr Martin Rapier, Head of Application Support,
+         CiCS, 285 Glossop Road, Sheffield S10 2HB.
+         Alternatively email CV and covering letter to: m.rapier@shef.ac.uk
+         Closing date for applications: Friday 28th May 2010 
+*****************************************************************************
+04-05-10 Abaqus command name changes.
+         In preparation for making Abaqus 6.9 the default version on iceberg
+	 all abaqus V6.5 related commands will be renamed  as follows;
+	   abaqus       -> abaqus65         abaquscae  -> abaquscae65 
+	   abaqusopenmp -> abaqusopenmp65   abaquspost -> abaquspost65
+	   abaqusviewer -> abaqusviewer65   abaqusu    -> abaqusu65
+	 
+*****************************************************************************
+29-04-10 Matlab license server will be restarted today to enable us to serve
+         licenses for Matlab 2010a (the latest version). This work will be
+	 followed by moving the license manager to the new license server
+	 later this coming week. All Floating Matlab license users will 
+	 need to point to the new server, which we will announce shortly.
+	                                                 D.Savas@shef.ac.uk
+*****************************************************************************
+29-04-10 New Fluent license server is about to replace the older license 
+         server after a successful trial. All stand-alone Fluent & Gambit 
+	 users must modify their license.dat files by replacing licserv1 or 
+	 acheron with licserv0 in that file. 
+	                                                D.Savas@shef.ac.uk 
+*****************************************************************************
+16-04-10 Some Fluent Jobs have died due to license server problems.
+         Please check your Fluent Jobs on iceberg and resubmit the failed
+	 jobs. 
+*****************************************************************************
+15-04-10 We are in the process of moving the Fluent license server onto a
+         new machine. This should not effect the iceberg users. 
+	  Those people running Fluent on their own platfors will need to 
+	 contact iceberg-admins@lists.shef.ac.uk for details of the new
+	 license server once the change over starts. 
+	 Further annoucements will follow as the work progresses.
+*****************************************************************************
+13-04-10 Many thanks to all our iceberg Fluent users who allowed the Fluent
+         teaching labs to take place by reducing their number of active 
+	 fluent jobs. The situation is back to normal now. 
+	 However more Fluent courses are planned for the next two weeks
+	 which may have an impact on us again. The full course time-table
+	 is published on http://www.sheffield.ac.uk/wrgrid/licenses.html
+	 In the meanwhile, we have approached Fluent Inc for more teaching
+	 licenses to alleviate the situation. 
+*****************************************************************************
+08-04-10 LATEST DOCUMENTATION FOR PGI COMPILERS AND THE NAG LIBRARY                       
+         HTML documents on NAG Version 22  and also on PGI compilers version
+	 10 are widely available via https://iceberg2.shef.ac.uk/docs
+	 man pages for PGI:  man pgf90 ,pgf77, pgf95, pgcc, pgCC and pgdbg
+	 are available when working on the worker nodes. 
+*****************************************************************************
+07-04-10 NAG Library Mark 22 is installed.
+         The latest version of the NAG Fortran library(MK22) is now 
+	 available on the iceberg cluster worker nodes.
+	 Use the following command to compile a Fortran program calling 
+	 routine(s) from the NAG (MK22) library;
+	 
+	      pgf90 yourprog.f90 -lnag22 
+	 
+	 ACML version of this library 'tuned for efficiency' can also 
+	 be invoked by using;   
+	      pgf90 yourprog.f90 -lnag22acml 
+	      
+	 Comprehensive information on using NAG on iceberg is available via;
+	       https://iceberg2.shef.ac.uk/docs/nag  
+	 Example programs can be copied into your directory by using
+	 the command;  
+	      nagexample22 {naglibrary_routine_name}
+	  For examle: nagexample22 d01ajf   
+	 
+	 The previous versions of this library are still available; 
+	  FOR MARK 21: 
+	       pgf77 yourprog.f   -lnag21 -lacml
+	    or 
+	       pgf90 yourprog.f90 -lnag21 -lacml
+	  FOR MARK 20:
+	       pgf77 yourprog.f   -lnag20 -lacml
+	    or
+	       pgf90 yourprog.f90 -lnag20 -lacml
+          
+         We are intending to remove MK20 of the library shortly. Please
+	 contact D.Savas@shef.ac.uk if you wish to continue to use MK20.	
+*****************************************************************************
+26-03-10 Fluent Licenses have been renewed ....
+     
+*****************************************************************************
+16-03-10 PGI Fortran and C compilers have been upgraded to Version 10.2.1.
+         Access to the compilers remain the same which is via the commands
+	 pgf90, pgf77, pgc and pgcc, pgCC, pgdbg "only on the worker nodes".
+	 
+	 The previous version can still be accessed via the -V8.0-6 flag; 
+	  (e.g.  pgf90 test.f90 -V8.0-6  ) 
+                           Report problems to iceberg-admins@lists.shef.ac.uk
+*****************************************************************************
+10-03-10 Fluent License is due for renewal.
+         Fluent licenses are due for renewal, as a result of which users of
+	 Fluent will notice messages to that effect. We have informed ANSYS
+	 and are waiting for them to provide us with new licenses.
+*****************************************************************************
+26-02-10 Advance information : PGI Fortran and C compilers as well as the 
+         NAG fortran library will be updated during the next three weeks. 
+	 NAG library version will be Ver22. However, we will continue to 
+	 support the previous V20 & V21 versions. 
+	 More news & information is to follow later.
+	 We are also updating our NAG Library licenses. Please email
+	 D.Savas@sheffield.ac.uk for any requests relating to NAG Library.
+*****************************************************************************
+25-02-10 9:25am We were having problems with the cluster job scheduler 
+         earlier this morning.This is now fixed and iceberg is back to normal
+*****************************************************************************
+20-11-09 NAG Library licenses have been renewed for 2009/2010.
+         Example test programs can be accessed via command ;  
+         nagexample (for Fortran example programs ) 
+	 nagc_example ( for C example programs )  
+*****************************************************************************
+06-11-09 Due to a large Fluent tutorial class, there will be shortage of
+         available Fluent licenses today between 2.00pm and 5.00pm.
+	 If your Fluent jobs fail due to licence problems please
+	 resubmit them after 5.00pm today.
+*****************************************************************************
+16-09-09 runmatlab command had incorrect help information which has now
+         been corrected. You must specify memory requirement as 
+	    -mem nnG   and not as -mem=nnG as was reported earlier. 
+*****************************************************************************
+02-09-09 Some jobs may have failed due to connectivity problems today.
+         Iceberg workers had lost connectivity with the outside world 
+	 during this morning due to system configuration problems.
+	 Therefore any jobs that required licenses, such as Fluent/Matlab
+	 /Ansys/Abaqus would have failed to start. 
+	 Network problems are now fixed, please resubmit your failed jobs.
+	 Appologies from iceberg team.    
+*****************************************************************************
+24-08-09 Courses coming up soon on "HOW TO USE ICEBERG"
+
+         A series of two courses are scheduled so as to help new users work 
+	 on iceberg effectively. 
+	 The first session (CIC6001a) is on basics of using Linux.
+	   Venue: Room K17 of Hicks Building, Date: 8th Sept, 14:00-17:00
+	     
+	 The second (CIC6001b) is on job submission and shell programming. 
+           Venue: Room K17 of Hicks Building, Date: 16th Sept,  9:30-12:30 
+	  
+	 Places are limited, so please visit the WRG training pages for more 
+	 information and to register via the Learning Management System.								    
+
+*****************************************************************************
+18-08-09 ABAQUS documentation links restored.
+         Links to full Abaqus documentation from grid support pages had been 
+	 broken following the head-node changes. They are now fully restored 
+	 and functioning via the page:
+	 http://www.sheffield.ac.uk/wrgrid/documents/icebergdocs.html 
+	 or directly at: 
+	 https://iceberg2.shef.ac.uk/docs/abaqus652/v6.5/index.html
+*****************************************************************************
+14-08-09 RUNFLUENT command will now accept a memory requirements parameter
+         in the form of -mem nG.   For example: -mem 8G
+	 
+         Type  runfluent  for more information on this command.
+*****************************************************************************
+06-08-09 RUNMATLAB command will now accept a memory requirements parameter.
+
+         The command to submit batch matlab jobs has been improved to accept
+	 a parameter for memory limits. Type runmatlab for more details.
+
+*****************************************************************************
+27-07-09 SGE UPDATES
+         From 3,August the old parallel environment ( old.parallel.q ) will
+	 no longer be available. The new parallel envoronment  (parallel.q ) 
+	 have been providing a faster parallel service on the latest 
+	 infiniband connected nodes.
+	 On this date we shall also improve the memory allocations provided
+	 to user jobs by introducing the -l mem parameter to qsub command.
+	 Please see the documentation page:
+	 http://www.sheffield.ac.uk/wrgrid/documents/gridengine.html
+	 for further details.
+*****************************************************************************
+27-07-09 Uspace anyone?  
+         There is now a USpace group named 'iceberg' that provides 
+	 discussions, blogs and shared-documents for iceberg users to 
+	 participate. 
+	 You can sign into uSpace via MUSE on the University pages.
+	 There is also a Linux Uspace group, that may also be of interest to
+	 the iceberg users.
+*****************************************************************************
+22-07-09 UBUNTU:  Are you game for it ?
+         Fed up of Windows, Viruses, Spyware, Exceed ? 
+         See http://wrgrid.group.shef.ac.uk/ubuntu/index.html 
+*****************************************************************************
+03-07-09 Use only SFTP and SSH methods of access to iceberg.
+         Following on from an earlier news item dated 26-06-09, only the 
+	 secure methods of access (ssh)  and ftp (sftp) are allowed now.
+	  Windows users who do not have an ssh or sftp client should see the 
+	 following web page and download a secure client. 
+	  http://www.shef.ac.uk/savas/software/xconnect/   
+*****************************************************************************
+02-07-09 MAPLE VERSION 13 IS NOW AVAILABLE
+         The latest version of Maple is now available on the iceberg cluster.
+	 The commands maple, xmaple and mint now access the latest version
+	 (i.e. version 13) .  If you wish to continue to use the earlier 
+	 version (12) you may still do so by using the commands maple12,
+	 xmaple12 and mint12. Please note that you can only run maple on 
+	 one of the worker nodes. Su use qsh or qrsh to get to maple. 
+	                               Report problems to D.Savas@shef.ac.uk
+*****************************************************************************
+01-07-09 MAPLE VERSION 13 WILL SHORTLY BE AVAILABLE
+         The latest version of Maple ( V13) will shortly be available on
+	 iceberg. Further announcements will follow. If you have stand-alone
+	 versions of Maple on your Linux/Mac/Windows workstation you will 
+	 need to obtain new licenses or upgrade to Version 13 by August 25th 
+	 when the current licenses run out. 
+	 News about license codes will be published via the following URL 
+	 as soon as we receive the new licenses. So, if you are a Maple user 
+	 please bookmark-
+	  http://www.sheffield.ac.uk/wrgrid/software/maple.html
+	                              
+*****************************************************************************
+26-06-09 HAVING PROBLEMS IN TERMINAL ACCESS TO ICEBERG VIA EXCEED ? 
+         The only recommended method of terminal access to iceberg is now 
+	 the SSH method. 
+	 EXCEED software offers REXEC as well as SSH methods of access.
+	 Even on Managed-XP machines REXEC method of Exceed is available. 
+	 HOWEVER, iceberg no longer allows REXEC method of access to it.
+	 This means, users who have been using the REXEC method will now 
+	 get messages of the form 'Unable to Connect to host using specified
+	 method'. When using EXCEED, please ensure that you are using the 
+	 correct method by selecting 'Secure Shell' in the METHOD drop-down
+	 list. 
+
+*****************************************************************************
+26-06-09 Running Parallel Fluent jobs on Gigabit-ethernet connected nodes ***
+         *****   runfluentx  ******
+         Normal way of running parallel Fluent jobs is via the runfluent 
+	 command ( see the earlier news item ).
+	 However, currently there is a lot of demand for the new parallel 
+	 hardware which is resulting in long wait times for parallel jobs.
+	 Under these circumstances, for a quicker turn-round it will be
+	 better to run parallel Fluent jobs on the older parallel nodes.
+	 A command called runfluentx is available for doing just this. 
+	 runfluentx works exactly the same as runfluent except that it uses
+	 the earlier parallel hardware which is not as heavily used.
+	 Type runfluentx    for more information.  
+        
+*****************************************************************************
+25-06-09 AN EASY WAY TO RUN YOUR MATLAB BATCH JOBS : RUNMATLAB
+         This is a reminder that you can submit your Matlab jobs for batch
+	 processing on iceberg simply by using the runmatlab command.
+	 For example; runmatlab mymatlabscript.m  -time 08:00:00
+	 will submit a Matlab job for batch processing that executes all the 
+	 Matlab commands contained in file mymatlabscript.m for upto 8 hours. 
+	 Just type- runmatlab without any parameters for further information.
+	 
+	 This command was broken during last week when we implemented system
+	 changes but it is fixed now.    
+                                 Report problems to D.Savas@sheffield.ac.uk
+*****************************************************************************
+24-06-09 AN EASY WAY TO SUBMIT SERIAL OR PARALLEL FLUENT JOBS : RUNFLUENT
+
+         A command called runfluent can be used to make submitting (qsub) of 
+	 Fluent jobs much easier. 
+	 On iceberg headnode,type   runfluent  for help on how to do this.
+	  
+	 EXAMPLE:   runfluent myfluent_Journal_file -time 12:00:00
+	 
+	 Parallel Fluent jobs can also be run easily on the new parallel
+	 environment.
+	 EXAMPLE:   runfluent myfluent_Journal_file -time 12:00:00 -t 8
+	 
+	 will run the same job as a parallel job on 8 nodes.
+	 
+	 Existing users of this command, please note that the parallel 
+	 jobs submitted this way will now make use of the new parallel
+	 environment. 
+	                       Please report problems to D.Savas@shef.ac.uk  
+*****************************************************************************
+10-06-09 Running your jobs with certain memory requirements.
+         After the latest re-configurations of the SGE scheduling system it  
+	 is now possible to request specific amounts of memory to be made 
+	 available to your jobs. This should hopefully alleviate the long-
+	 standing issue of running jobs with large memory requirements.
+	 Please see the iceberg users forum for further details at
+ http://www.wrgrid.group.shef.ac.uk/forum/viewtopic.php?f=2&t=130&p=225#p225
+	      
+*****************************************************************************
+08-06-09 Parallel Fluent Jobs on the older parallel nodes.
+         With the new set of iceberg nodes coming into service we are hoping 
+	 to move most of the parallel Fluent work onto the new nodes. 
+	 However, in the meanwhile, it is still possible to run Fluent jobs
+	 on the older paralllel setup via the old.parallel queues.Here is 
+	 how that can be done: 
+	
+	 Assuming that you want to run a parallel Fluent job using 8 
+	 processors, running for a maximum of 36 hours and using your Fluent- 
+	 Journal file named myfljob.jou .
+	 A script-file containing the following lines can be qsub'ed to 
+	 run the desired job:
+	  # 
+	  # - Note:time--V -----------No. of Processors needed -----V
+	  #$ -l h_cpu=36:00:00  -q old.parallel.q -cwd -pe mpich-gm 8
+	  #$ -v FLUENT_INC=/usr/local/packages/Fluent.Inc,FLUENT_ARCH=lnamd64
+	  #$ -v DISPLAY=NULL
+	  #  - Note: assuming here to be 3D geom.-----V 
+	  /usr/local/packages/Fluent.Inc/bin/fluent -v3ddp -g \
+	  -i myfljob.jou -t8 -pethernet -cnf=$TMPDIR/machines
+	  # Note: In -t8  8 matches the No. of processors quoted above 
+	  
+	  
+         We might phase this service out when the latest version of Fluent 
+	 (ANSYS/Fluent V12) becomes available later this summer.
+	  
+*****************************************************************************
+01-06-09 Further information on the Intel Compilers 
+         Latest version of the Intel Compilers (V11) as well as the previous
+	 version (V10) are installed on iceberg.
+	 Type      source use-intelv10         to use Version 10 
+	 Type      source use-intelv11         to use Version 11 
+	  
+	 We currently do now have the MPI libraries for Version 11. 
+	 Note: Use only on the workers(i.e after qsh)and not on the headnode.
+	 
+	 Notes on how to install the intel compilers on your own Linux 
+	 machine and use the University licenses are available in :
+	 
+	  http://dsavas.staff.shef.ac.uk/software/ubuntu1.html  
+	
+	
+*****************************************************************************
+28-05-09 INTEL: C and Fortran Compilers have been updated.
+         Version 10.1 of these compilers are now available on the iceberg 
+	 cluster for general use. As Abaqus requires the V10 compiler we
+	 have not updated these compilers on iceberg to the latest version.
+	  We do however have a few floating licenses to allow users access 
+	 to the latest version (V11) of these compilers from their own Linux 
+	 workstations. 
+	 Further details on how to access these will be published later.
+	 If you wish to use the Intel Compilers on iceberg type; 
+	     source  use-intel while using a worker node. 
+	 You can also add [source use-intel]  to your .bashrc file to make
+	 this automatic everytime you log in.
+	                      For more info contact D.Savas@sheffield.ac.uk  
+*****************************************************************************
+27-05-09 **** WARNING. Problems with deleting files.
+         Users who exceed their filestore quotas have recently been getting
+	 into great difficulties due to an operating/file-system bug
+	 which leaves them in a catch-22 situation as they can no longer
+	 delete files while their quotas are exceeded. 
+	   Until this bug is fixed with the next major update, the only way
+	 out of this situation will be to use the RM command to delete your 
+	 unwanted files. So, if you have exceeded your quota type;
+	         RM filename          to delete an unwanted file.
+	 RM command works just like rm command but it will not fail while
+	 your quota is exceeded.
+*****************************************************************************
+
+26-05-09 As part of the continuing development of the 'iceberg' cluster, we 
+         will be updating the existing parallel environment.
+	 80 older architecture cores will be taken out of service to be 
+	 replaced by 184 new cores housed in 23 nodes(boxes), named HAWLEY
+	 nodes. 
+	 Each node will have 8 cores and 32GB or memory. They will also be 
+	 interconnected with each other via high-speed/low-latency infiniband  
+         switches. This is expected to greatly improve the performance of
+	 the MPI jobs.  
+	 The parallel.q will be modified to use the new nodes/environment.  
+	 We will continue to make the existing parallel environments 
+	 available to users under a temporary queue: old.parallel.q.  
+	 We will be providing the OpenMPI and MvaPICH2 parallel environments 
+	 on the new nodes, to replace the old environments.  
+	 If you currently use the parallel.q then we advise you to migrate 
+	 your code to the new environment as soon as possible,
+	 as the old nodes will be removed from the cluster. 
+
+*****************************************************************************
+06-05-09 As part of the updates to the iceberg cluster, PGI Fortran/C/C++
+         compilers will be updated to the latest version ( Ver:8.0-6 )  
+	 within the next few days.
+	                                       D.Savas@sheffield.ac.uk
+*****************************************************************************
+14-01-09 Short Introduction to Matlab Course is starting on Tuesday the 
+         20th of January. For further information and registration see;
+	 
+	   http://www.shef.ac.uk/wrgrid/training 
+	                                       wrgrid-training@shef.ac.uk
+*****************************************************************************
+06-01-09 Fluent Licenses have been updated.
+         We now have 90 Fluent licenses that are valid until August 2009.
+	 Thanks to all Fluent/Gambit users for their patience. 
+	 We are hoping to release floating Fluent licenses to Linux & Windows
+	 users within the campus soon. Please contact D.Savas@shef.ac.uk
+	 if you are interested in running Fluent on your own desktop. 
+*****************************************************************************
+10-11-08 Ongoing Fluent license problems. 
+         Currently, we are getting low on the number of available Fluent 
+	 licenses mainly due to increased number of parallel Fluent jobs
+	 running on the iceberg cluster. We have requested for more licenses
+	 and the situation should improve towards the end of this week.
+	 
+*****************************************************************************	 
+09-10-08 The problems due to date discrepancy on some of the iceberg workers  
+         have been fixed. The problem had effected only three of the worker 
+	 nodes whose clocks had lost synchronism with the rest of the cluster  
+	 
+*****************************************************************************
+08-10-08 Due to a problem with date setting software on some of the worker- 
+         nodes, programs such as Fluent and Matlab which use floating 
+	 licenses have failed to start on some of the iceberg workers.
+	 We are investigating this problem.
+*****************************************************************************
+	 
+27-08-08 Maple12 is now installed on iceberg and has become the default 
+         version. I.e commands-  
+	      maple, xmaple and mint  will now start the latest (12)version. 
+         License for version 10 has run out.If MapleSoft allows us, we shall
+	 continue to provide V10 via the commands ;
+	      maple10 , xmaple10 and mint10  after announcing it here. 
+  
+                                                   D.Savas@sheffield.ac.uk
+*****************************************************************************
+04-02-08 This is a reminder for all users that the old iceberg scratch area 
+         will be removed next Thursday 7th February.
+         Users are reminded to move any of their data in /scratch to the new
+         data area /data
+         The iceberg scratch disks will be added to the new /data storage used 
+         by iceberg
+
+*****************************************************************************
+17-01-08 ALL SGE QUEUE LIMITS ARE RESTORED. NFS HANDLES PROBLEMS REPORTED.
+         All SGE queue limits that were limited (see previous two news items)
+	 are now restored back to their default values.
+	 
+	 There has been some teething problems with the new store.
+	 Please report stale NFS problems to helpdesk@sheffield.ac.uk
+*****************************************************************************
+09-01-08 15:20 ALL EXCEPT SHORT INTERACTIVE QUEUES ARE DISABLED NOW !
+         From now until iceberg restarts tomorrow ( the 10th of Jan, 08 ) all
+	 the SGE queues except the short interactive queue are disabled. 
+	 As the 'iceberg cluster' can go down any moment, please note that
+	 your jobs will be running at your own risk from now on. 
+	 Please see the following news item for more info.              
+*****************************************************************************
+04-01-08 TO UPGRADE ICEBERG STORAGE, SGE QUEUES ARE TEMPORARILY RESTRICTED  
+	 This announcement is to inform iceberg users about ;               
+  		A.  The risk of possible outages (due to maintenance work)  
+  		B.  Winding down of the job queues on iceberg in preparation 
+		    for the upgrade work.
+	 As a result of impending maintenance work in the computer centre 
+	 there will be an at risk period from Tuesday 8th January until 1800 
+	 until the 10th of January. It is expected that iceberg will become 
+	 unavailable on the 10th of January between 0900 and 1800. This will
+	 give us an opportunity to upgrade its storage system to provide 9TB 
+	 of storage dedicated to our HPC users.
+	 In preparation for these events the Sun Grid Engine queues are  
+	 being wound down.Long queues are NOW disabled and other queues are 
+	 modified to restrict the cpu limits to 8 hours or less. 
+	 If job times ( -l H_CPU ) are specified and in excess of 8 hours  
+	 these job will never start to run. 
+	 If no -l H_CPU parameter is specified, any job exceeding 8 hours 
+	 will simply be killed with possible loss of all results.
+	 
+	 ONCE THE STORAGE UPGRADE IS COMPLETED;
+	 -  users home areas will be under /home/username, 
+	 -  users will initially have 5GB of backed-up storage allocation 
+	    in their home area (backed up nightly),
+         -  non-backed-up permenant user data will continue to reside in
+	     /data/username with a SUBSTANTIALLY increased quota 
+	     of 50 GB per user,
+         -  the current scratch area /scratch on iceberg will be removed 
+	     the following week.Therefore users are advised to move any 
+	     data they require under /scratch to /data/username area.
+	    
+	 There will be further announcements before /scratch is actually 
+	 removed.
+
+*****************************************************************************
+15-11-07 **** Announcing the NAG Nortwest Seminar ****
+         Numerical Algoriths Group (NAG) is holding a seminar at the 
+	 University of Manchester on 28th of November 2007, which is free
+         to attend but places are limited. This means, to get a place, early 
+	 application is essential. 
+	 For further information and registration please visit:
+	           http://www.nag.co.uk/market/northwestseminar2007.asp   
+*****************************************************************************
+15-11-07  The Sun Grid Engine has been reconfigured so that the maximum 
+          number of simultaneously running user jobs can not exceed the 
+	  limit of 25. Jobs attemping to exceed this limit will be held in 
+	  the queue untill the users simultaneous jobs drop below 25. 
+                                                   D.Savas@sheffield.ac.uk
+*****************************************************************************
+02-11-07  Gnu Fortran90 Compiler is now installed on iceberg and the workers
+          gfortran or gfor command will invoke the compilers. 
+	   type gfortran --help for short description.
+	   man gfortran  will provide more detailed information.
+	   The older gnu Fortran77 compiler is still available via 
+	   the g77 command. 
+	                                            D.Savas@sheffield.ac.uk
+*****************************************************************************
+02-11-07  Nedit is improved to recognise Fortran90 syntax.
+                                                    D.Savas@sheffield.ac.uk
+*****************************************************************************
+01-11-07  vi is improved. A new installation of vim is now in place on 
+          iceberg and all the workers. Commands vi and vim both access this 
+          improved interface. The most noticable change will be the fact that
+	  vi,vim will recognize the language syntax for such things as shell
+	  scripts, C,C++, Fortran & Fortran90 programs and highlight keywords
+	  in nice colours.                         D.Savas@sheffield.ac.uk
+*****************************************************************************
+24-10-07  Matlab license updated today.
+          Matlab license is updated in preparation for joining the licenses
+	  of the ACSE and CiCS departments. Please report problems to 
+	  D.Savas@shef.ac.uk  if you encounter license related errors.
+*****************************************************************************          
+12-10-07  R-Statistics package update 
+          The statisics package R has been updated to version R-2.6.0
+*****************************************************************************
+14-09-07  HPC TRAINING MODULES ANNOUNCED 
+          The new timetable for the local HPC & GRID training program   
+	  has just been announced. Please see the web page - 
+	  http://www.shef.ac.uk/wrgrid/training/timetable.html for details.
+	  On-line registration for these courses is via: 
+	  http://www.shef.ac.uk/wrgrid/training/apply.html
+*****************************************************************************
+04-09-07  IMPORTANT NOTICE: SCHEDULED POWER CUT TO ICEBERG
+          The electricity supply to the Computing Centre will be disconnected
+	  for the evening of Friday 7th September 2007. From 7pm on that day,
+          iceberg cluster will be powered down and will only be brought back 
+	  after the power is safely restored on Saturday.
+	  This will allow for major power supply installation work for the 
+	  computer to be carried out.
+	   
+*****************************************************************************
+22-08-07  MAPLE 10 LICENSE IS RENEWED
+          Maple license is renewed on iceberg for another year now. 
+	  We plan to move onto Maple version 11 by the start of the next 
+	  academic year.
+*****************************************************************************
+20-08-07  **** Maple Licenses have arrived ! ****
+          If you have installed Maple 10 on your PC or Linux workstation its
+	  license will run out on the 25th of August. 
+	  To renew your license simply visit : 
+	       http://www.shef.ac.uk/wrgrid/software/maple.html
+	   and follow the instructions. 
+	                                                  D.Savas@shef.ac.uk
+*****************************************************************************
+17-08-07  Maple license will be renewed soon 'before it expires next week! .
+*****************************************************************************
+17-08-07  Fidap License has been renewed just in time ( phew !!! ) 
+          Report problems with Fluent or Fidap Licenses to D.Savas@shef.ac.uk
+*****************************************************************************
+16-08-07  Fidap license about to expire. 
+          Fidap license will be expiring tomorrow. We are waiting for the 
+	  new license keys and hopefully will install them as soon as they
+	  arrive.                                    D.Savas@sheffield.ac.uk
+*****************************************************************************
+31-07-07  Problems with comp00 .
+          We are aware of intermittent problems on the worker node comp00.
+          Until the problem is fixed, there may be problems with some jobs
+	  running on that node. 
+*****************************************************************************
+31-07-07  NAG LIBRARY LICENSES HAVE BEEN RENEWED.
+           
+	  The NAG library ( see https://iceberg.shef.ac.uk/docs/nag ) 
+	  licenses have been renewed and the license mechanism is changed.
+	  There should be no visible effects to the users. However,          
+	  if you hit problems accessing NAG, please issue the following
+	  command before using NAG: 
+	  
+	     export NAG_KUSARI_FILE=/usr/local/packages/nag21/license.lic
+	     
+	                           Report Problems to D.Savas@sheffield.ac.uk  
+*****************************************************************************
+25-07-07 NEW LOCATION OF HPC WEB PAGES:
+         All local HPC, GRID and WHITE-ROSE-GRID related web pages are now
+	 located under: http://www.shef.ac.uk/wrgrid/ 
+	 Work is under way to populate this area with the latest information.
+	                                            D.Savas@sheffield.ac.uk
+*****************************************************************************
+25-07-07 UK E-SCIENCE 2007 MEETING IN NOTTINGHAM DURING SEPTEMBER
+ 
+         This is a REMINDER to register to this event BEFORE the 
+         1ST of AUGUST to avoid the late fee for the 2007 All Hands Meeting.
+
+         This year's UK e-Science All Hands Meeting will be held at the 
+	 East-Midlands Conference Centre in Nottingham, 10th-13th September 
+	 2007.
+         You can register at -
+          http://www.allhands.org.uk/registration/delegate-registration.cfm 
+
+         The goal of the meeting is to provide a forum in which information
+	 on e-Science projects from all disciplines can be communicated 
+	 and where the capabilities being developed within projects can be 
+	 demonstrated.
+
+         AHM 2007 will begin on the evening of Monday 10th September with a 
+         programme of mini-symposia. The main conference programme will 
+	 begin on Tuesday 11th September and end early afternoon on 
+	 Thursday 13th September.
+
+         The provisional programme will be online this week at 
+          http://www.allhands.org.uk/programme/index.cfm 
+
+         Further details about the event can be found at www.allhands.org.uk
+	 
+	 Any user wishing to demonstrate their projects during this meeting
+	 or need further information should contact:M.Griffiths@shef.ac.uk
+*****************************************************************************
+16-07-07 The planned shutdown of power to the computer centre has been
+	 cancelled. Users will be informed when this shutdown for essential
+	 work is rescheduled.
+*****************************************************************************
+03-07-07 On Saturday 7th July the computer centre will have power 
+	 cut this is for important work to commence.
+	 To reduce the affect this has on Iceberg users the 
+	 following will happen:
+	 On 3rd July  Long queues have been disabled
+         On midnight 4th July all other queues will be disabled
+         At 06:00 on 7th July Iceberg will be shutdown.
+	 Any jobs still running at 06:00 will be terminated.
+
+	 We are sorry for any inconvenience this will cause.
+*****************************************************************************
+18-06-07 Upgrading of Fluent from 6.2.16 to 6.3.26 is completed.
+         The (docs) command now accesses the latest Fluent documentation. 
+	 All software documentation on iceberg can also be accessed locally 
+	 via the web without having to log onto iceberg by pointing the
+	 browser to https://iceberg.shef.ac.uk/docs or more specifically
+	 https://iceberg.shef.ac.uk/docs/fluent/index.html for Fluent.
+	                       Please report problems to D.Savas@shef.ac.uk
+*****************************************************************************
+13-06-07 Fluent will be updated to version 6.3.26 today
+         Apologies for any interruptions caused. 
+*****************************************************************************
+31-05-07 ANNOUNCING WRG Seminar on TEXT MINING over the Access-Grid.
+	   ......   NOTE CHANGE OF TIME FROM PREVIOUS POSTING.....
+	 Title:     Delivering Text Mining Services to the Community
+	 Venue:     Access Grid Room - ICOSS Building
+	 Date/Time: Wednesday 13th of June at 3.15pm
+         Speaker:   Sophia Ananiadou, Reader in Text Mining, the University  
+	            of Manchester, School of Computer Science  
+         This presentation will take place over the Access Grid from the 
+	 University of Leeds. The presentation will provide an overview of
+	 the Centre's ( www.nactem.ac.uk) work on this field. All from 
+	 Sheffield Univ. are welcome but places are limited to 15 people.  
+	 Therefore please let us know if you wish to attend by contacting
+         either D.Savas@sheffield.ac.uk or M.Griffiths@sheffield.ac.uk
+*****************************************************************************
+21-05-07 Queue capacity is temporarily reduced: Total of 20 processors on the 
+         iceberg cluster has been reserved for an urgent task by an Applied 
+	 Maths research group. This may cause some delays to the user jobs 
+	 submitted onto the iceberg cluster today.  
+	 You can follow the progress of your jobs by typing ;
+	  Qstat     ( note the upper-case Q on this command name ) .
+*****************************************************************************
+18-05-07 Iceberg System Problems Resolved.
+         Yesterday's System problems have been resolved and the iceberg 
+	 cluster is running normally again. 
+	Please report major system problems to iceberg-admins@lists.shef.ac.uk
+*****************************************************************************
+12-04-07 Matlab License Server will be restarted this morning in preparation
+         to serve Matlab 2007 release licenses within the campus. 
+	 This may cause interruption to some Matlab jobs
+*****************************************************************************
+15-03-07 (16:30) PGI Compilers are now updated. 
+         PGI compiler update has now been completed and the latest version 
+	 released on iceberg and its worker nodes.
+	 We apoligize for the brief interruption during this afternoon.
+	 Please report problems to helpdesk or D.Savas@sheffield.ac.uk 
+*****************************************************************************
+14-03-07 FLUENT/GAMBIT license problems. 
+         Problems with the fluent licenses have made these software unusable
+	 from midnight to until 10.25am today. Everything should now be 
+	 back to normal. 
+*****************************************************************************
+07-03-07 PGI Compilers are to be updated to the latest (V7.0.2) version.
+ 	 Work is in progress to update the pgi compilers;
+	 pgf90 , pgcc , pgCC.  
+	 There may be slight interruptions to the availability of these
+	 compilers during the installation period.
+	 Further announcements will follow ....
+	 	         Please report problems to : D.Savas@sheffield.ac.uk
+*****************************************************************************
+07-03-07 MATLAB IS UPDATED TO VER 7.3 ( R2006b )
+         Matlab has now been updated to the latest version on iceberg. 
+	 The previous version (V7.1)of Matlab will still be 
+	 available by typing the command:  matlab71.
+	    The new version is 64bit code and does not contain the Symbolic
+	 Math Toolbox. This toolbox was not made available for the current
+	 64bit versions on iceberg. Users of the Symbolic Math Toolbox should 
+	 continue to use the previous 32 bit version by typing ; 
+	             matlab71_32
+	     
+	                Please report problems to : D.Savas@sheffield.ac.uk
+*****************************************************************************
+10-01-07 ANNOUNCEMENT ON ICEBERG UPGRADE PLANS   
+         A number of changes and upgrades are planned for for the central 
+	 computation facility, Iceberg, to be completed by early summer 2007,
+	 as follows.
+
+         (a) A software update to Rocks, including Open MPI available on 
+	     all nodes.
+
+         (b) The head node to be doubled in capacity,from 4 cores to 8 cores.
+
+         (c) Increased storage will come available.
+
+         (d) A hardware upgrade will increase throughput by perhaps 50%. 
+	 
+	 The 40 2-way worker nodes (with 80 processors in total) will be 
+	 replaced by about 160 processor cores in nodes which are expected to 
+	 have 8 cores.The memory will remain at 2GB per core, but memory is 
+	 not currently under pressure and with more cores in each node, there 
+	 will be more flexibility to run larger jobs.
+         The 20 4-way nodes, each with 4GB/core, interconnected by Myrinet 
+	 will remain in service until 2008-2009, for the small number of 
+	 users who benefit from the low latency MPI interconnect.
+
+         The replaced worker nodes will be allocated to to high-energy 
+	 physics, for ppGrid, which will be handling the analysis of data 
+	 from the Large Hadron Collider at CERN, due to be switched on later
+	 in 2007.
+
+         Comments and questions about this plan can be addressed to 
+	 Chris Cartledge, c.cartledge@sheffield.ac.uk on Ext: 23008. 
+                         
+*****************************************************************************
+11-12-06 ANNOUNCEMENT OF ONCOMING PRESENTATION: EVOLUTION OF MATLAB
+	 Cleve Moler the original author of Matlab and cofounder of 
+	 "The MathWorks" will give his personal insight on the evolution 
+	 of Matlab. This event takes place at Sheffield University on the 
+	 morning of Wednesday the 10th of January 2007. 
+         Registration is required for this event.
+	 Please point your browser to:  http://www.mathworks.co.uk/sheffield
+	                                to register to attend this event. 
+*****************************************************************************
+24-11-06 TGRID license problems fixed. 
+          tgrid had stoped working due to license changes. This is now fixed.
+*****************************************************************************
+27-09-06 NAG Library Mark 21 is installed. 
+         The latest version of the NAG library(MK21) is now available on 
+	 iceberg as well as the previous version (MK20) that existed. 
+	 To compile and link a Fortran ( 90 or 77) program with this library
+	 use the following commands: 
+	      pgf77 yourprog.f -lnag21 -lacml
+	   or
+	      pgf90 yourprog.f90 -lnag21 -lacml
+	      
+	 The previous version is still available by using ; 
+	       pgf77 yourprog.f -lnag -lacml
+	   or
+	       pgf90 yourprog.f90 -lnag -lacml
+	 Comprehensive information on NAG is available by pointing your
+	 web browser to: 
+	       https://iceberg.shef.ac.uk/docs/nag/index.html
+	                                                D.Savas@shef.ac.uk	 	                  
+*****************************************************************************
+23-08-06 Maple license is renewed. 
+*****************************************************************************
+15-05-06 GAMBIT IS UPDATED FROM VERSION 2.1.2 TO 2.2.3 
+	 Gambit is now updated to the more recent version 2.2.3 on iceberg 
+	 worker nodes. This should hopefully not effect the present users 
+	 of Gambit and their Gambit files. If you are having problems with 
+	 the new version of Gambit, you can still continue to use the 
+	 previous version by starting Gambit with the -r2.1.2 parameter. 
+	  e.g.  gambit -r2.1.2 
+	                                                D.Savas@shef.ac.uk	 
+*****************************************************************************
+11-05-06 Comsol usage on iceberg:
+	 The default release of Matlab on iceberg is the 64-bit version which
+	 should allow Matlab users to handle larger problems. 
+	 However,  there is no 64bit version of Comsol released for this
+	 platform yet and therefore comsol must be invoked with a 32-bit 
+	 version of matlab.  Therefore the command to invoke Comsol with 
+	 Matlab can be either ;
+	     comsol matlab71_32
+	  or 
+	     comsol matlab7 
+	                                                D.Savas@shef.ac.uk
+*****************************************************************************
+9-03-06 The latest version of MATLAB (V7.1)(R14SP3)(64bit) is now the default 
+        version on 'iceberg'. The previous version V7.0.1 ( R14SP1) can only
+	be accessed by using the command ( matlab7 ) 
+	All references to matlab will run this latest version, which seems 
+	to be faster to load and use. 
+	
+	Summary of Matlab related commands; 
+	
+	   matlab      : Matlab (V7.1)(R14SP3) (64-bit ) (Without Symb.Maths)
+	   matlab71_32 : Matlab (V7.1)(R14SP3 ) (32-bit)(With Symb.Maths)
+	   matlab7     : Previous version ( V7.0.1 ) ( R14SP1 ) 
+	   mex         : Mex builder
+	   mex7        : Mex builder for V7.0.1
+	   runmatlab   : Easy way to submit Matlab(V7.1)(64-bit) jobs to SGE.
+	                                                D.Savas@shef.ac.uk
+*****************************************************************************
+23-02-06 E-Science Event at LEEDS University on 28th of MARCH.
+
+  	 Enabling the Research of Future: A range of e-Infrastructure 
+	 developments are  maturing and grid computing is increasingly used 
+	 as a basis for the computation and data management required by 
+	 collaborative research. These innovative developments more often 
+	 provide the underpinnings for novel multidisciplinary and 
+	 collaborative research environments. The White Rose University 
+	 Consortium, the White Rose Grid e-Science Centre and the National 
+	 e-Science Centre training team are running this free one day seminar 
+         to introduce e-Infrastructure and how it enables research.
+	 As places are limited please check the following web site for further
+	 information and registration as soon as possible.
+      
+         http://www.wrgrid.org.uk/workshop2006/
+       						P.Tillotson@sheffield.ac.uk
+*****************************************************************************
+20-02-06 A Note on Fluent Help Files
+	 Fluent requires a web browser to display its help files internally.
+	 However we do not have web browsers installed on the worker nodes 
+	 and we longer allow running fluent on the head node.   
+	 This means that it is no longer possible to access the Fluent Help 
+	 files from within Fluent. 
+	 Either of following two methods will allow you to access the Fluent 
+	 Help Files:
+	    - Type:  docs   on iceberg head node and follow links to 
+	      fluent documentation.
+	    - Using your web browser, point to the following URL:     
+		https://iceberg2.shef.ac.uk/docs/fluent/index.html
+		                                         D.Savas@shef.ac.uk
+*****************************************************************************
+13-02-06 How to increase your effective 'iceberg filestore' by taking 
+         advantage of your PC's spare hard-disk capacity:
+	 If you are running short of filestore allocation on 'iceberg' 
+	 this could be one way of solving your problems on your own. 
+	 However, you must be aware that anything stored and accessed from 
+	 your PC in this way will not be backed-up on iceberg and so you must 
+	 do your own backups of important files. 
+	 See the following URL for further details:
+	 
+	 http://www.dsavas.staff.shef.ac.uk/software/xconnect/index.html  
+	  
+*****************************************************************************
+09-02-06 The latest version of MATLAB (V7.1)(R14SP3)(64bit) is now installed.
+	 Tme previous version V7.0.1 ( R14SP1) will soon be removed and all
+	 references to Matlab will run this latest version.
+	 During the transition period the latest version will only be 
+	 accessible via the following commands;
+	   matlab71    : Matlab (V7.1)(R14SP3) (64-bit ) (Without Symb.Maths)
+	   matlab71_32 : Matlab (V7.1)(R14SP3 ) (32-bit )(With Symb.Maths)
+	   mex71       : Mex builder
+	   mcc71       : Matlab c (c++) compiler for generating executables.
+           mbuild71    : Matlab stand-alone executable builder.
+	   In due course, the document pages via <docs> command will also
+	   be updated to reflect these changes. 
+	   Please check your current script files with the latest version
+	   to make sure that they still work (which they should!) .
+	                                          D.Savas@sheffield.ac.uk
+*****************************************************************************
+20-12-05 Hardware Maintenance 
+
+	 It will not be possible to start the packages ansys, fluent and
+	 matlab for a brief period between 09:00 and 10:00 on 20-12-05. 
+	 Hardware Maintenance has been scheduled on the system running the
+	 License Managers for these packages.
+*****************************************************************************
+30-11-05 Maple has been updated from version 9.5 to 10.02 
+	 
+	 Type    maple     to access maple10 in text mode 
+	         xmaple    to access maple10 in graphics mode
+	         mint      to access maple10 diagnostics program
+	 Further announcements will follow regarding the location of the
+	 new network licence server for the site license users.
+	 Contact D.Savas@shef.ac.uk if you are having licensing problems.
+*****************************************************************************
+11-11-05 Both Matlab and Fluent commands have now been restricted to run only
+         under the sun-grid-engine. If you are use to logging into iceberg
+	 and typing matlab or fluent, you now need to log into iceberg as
+	 usual and then type qsh to get an interactive SGE session and run 
+	 matlab or fluent in that window as usual.
+*****************************************************************************
+27-10-05 Changing your own default shell
+
+         Some users have requested the ability to change their default
+         shell to something other than Bash
+
+         You can now do this using the ldapchsh command
+
+         For more information run ldapchsh
+
+****************************************************************************
+14-06-05 Ansys Upgrade
+
+         Ansys has been upgraded from
+         Ansys University Advanced to Ansys University Research
+
+         Changing the Ansys model limits from 128000 to 512000 nodes
+****************************************************************************
+02-06-05 On-line documentation on iceberg is now on the WEB
+         Most of the HTML and PDF format manuals and documentation provided
+	 with software and packages on iceberg as well as the home produced 
+	 documents on how to use iceberg are now available on the web.
+	 To access these pages please point your browser to - 
+	     https://iceberg.shef.ac.uk/docs/
+	 This is a secure site that will enforce passworded access for the
+	 remote 'i.e. non-sheffield-univ' users.
+	  
+	 If you do not have a browser on your workstation and you are using 
+	 X-terminal access to iceberg, the command <B> docs </B> can also be used to 
+	 access these pages via the mozilla browser. 
+	    Report Problems to A.J.Beresford@sheffield.ac.uk or D.Savas@ ...
+*****************************************************************************
+12-05-05 16:20pm Fluent Documentation is now installed. Help and user-guides
+         are accessible via the Help menu of the Fluent task-bar.
+*****************************************************************************
+12-05-05 The official latest version (V6.2.16) of Fluent is now installed
+         on iceberg to replace the previous release (V6.2.15). 
+	 The documentation and help will be installed as soon as possible.
+	 Until that is done there will be no help from within Fluent.
+	 Please accept our apologies & watch news for further announcements.
+	                          Report problems to D.Savas@sheffield.ac.uk	 
+*****************************************************************************
+10-05-05 The way parallel Fluent jobs are started has been changed to avoid 
+         the intermittent problems some users have been having. This change 
+	 also allows us to run Parallel Fluent jobs 'out-of-the-box'. 
+	 This implies that we can now theoretically run massively parallel 
+	 Fluent jobs, using up-to 80 processors at a time !!!  
+	 Whether this is sensible or practical is another matter.
+	 Number of processors to use is specified via the -t parameter of
+	 the runfluent command. Type runfluent on its own for more details.
+	                          Report problems to D.Savas@sheffield.ac.uk
+*****************************************************************************
+18-03-05 Many users FTP transfers of ASCII files (non-binary,machine-readable
+         files) have failed to come across correctly. These files contain 
+	 an extra ^M at the end of each line but they remain invisible to 
+	 most file viewer. One way of checking if your ASCII file, such as 
+	 Fluent Journal file is correct is to view it with cat -v command.
+	 E.g.  cat -v filename. 
+	 If you see ^M at end of lines then correct the file by typing;
+	       dos2unix filename 
+	       
+	 P.S. dos2unix may reset the file access rights, so you may have to
+	 check and re-define these rights via the chmod command.
+*****************************************************************************
+16-03-05 The commands runfluent and runmatlab can be used to make submitting
+         Fluent & Matlab jobs respectively easier.
+	 Just type runfluent   or runmatlab  without any parameters for 
+	 information on how to use them. 
+*****************************************************************************
+28-02-05 MAPLE is installed 
+         The latest version of Maple : Ver9.5 is now installed 
+	 The related commands are : 
+	 maple (line-mode)  xmaple (window-mode)   & mint 
+	                        Report problems to: D.Savas@sheffield.ac.uk
+*****************************************************************************
+28-02-05 Fluent, Fidap and Gambit are now installed.
+
+         Software I  Version  I Associated_Commands
+	 ---------I-----------I-----------------
+	 Fluent      6.1.25     fluent , runfluent 
+	 Gambit      2.1.2      gambit
+	 Fidap       8.7.0      fidap  , fidap_run , fidaptext
+	 
+	 NOTE: All interactive fluent,fidap and gambit users must run their 
+	       jobs on the faster worker nodes by typing Qsh first to get 
+	       a new interactive shell on one of the worker nodes. 
+	                         Report problems to: D.Savas@sheffield.ac.uk
+*****************************************************************************
+24-02-05 Abaqus 6.5.2
+         
+         Commands to run this software are
+
+         abaqus
+
+	 and for pre and post processing 
+
+	 abaquscae
+	 abaqusviewer
+
+****************************************************************************
+24-02-05 Software currently installed:
+         
+         abaqus 6.5.2
+         ansys (version 9.0)
+         fluent (version 6.1.25)
+         g77, gcc, g++ GNU compilers (version 3.2.3)
+         matlab (version 7.0.1)
+         NAG fortran library (mark 20) e.g use pgf77 xx.f -lnag -lacml
+         Portland Group Compilers pgf77, pgf90, pgcc, pgCC
+         ssh OpenSSH Secure Shell
+
+****************************************************************************
+06-01-05 New High Throughput Computer.
+         (**start date has changed to week beginning 14 February)
+
+	 CICS is pleased to announce a new high throughput computer,
+	 Iceberg, due to be in service in the week beginning 14 February
+	 2005. The system is being supplied by Sun Microsystems and
+	 will have 2.4GHz AMD Opteron (PC technology) processors which
+	 are currently the fastest available for computation, at about
+	 three times the performance of processors on Titania. The
+	 system will run 64-bit Scientific Linux, which is Redhat
+	 based. Iceberg has 160 processors for general use and
+	 connection to the White Rose Grid. Eighty of these processors
+	 are in 4-way nodes with 16GB main memory coupled by a double
+	 speed (4Gb/s) low latency Myrinet network, for parallel and
+	 high memory use. A further 80 processors are in 2-way nodes
+	 with 4GB main memory, for general high throughput computation
+	 use. In addition 160 processors in 2-way nodes are reserved
+	 for GridPP (the particle physics Grid).
+
+	 Titania users will be registered automatically on Iceberg and
+	 it is expected that take up will be high, because Iceberg will
+	 have six times the overall throughput. Titania will remain in
+	 service for as long as it is needed by users and at least
+	 until September 05, but at reduced (one quarter) capacity.
+	 Iceberg is planned to have all the commonly used software that
+	 is on Titania, but some applications are not yet available and
+	 others are currently 32-bit only. Iceberg will have Open MP
+	 and MPI support, including the parallel debugger DDT. More
+	 detailed information of the software to be available at the
+	 start of the user service will be given at the time.
+
+	 The additional dedicated staffing necessary for system
+	 management, training and user support has been underwritten by
+	 the university, but there is an expectation that large users
+	 of the system will make a contribution to costs. No mechanism
+	 has been agreed as yet. but CICS will be in contact with the
+	 larger users on Titania.
+
+         HIGH THROUGHPUT FACTS AND FIGURES
+         Processors: 320
+         Performance: 300GFLOPs
+         Main Memory: 800GB
+         Filestore: 9TB
+         Physical size: 7 racks
+         Power usage: 40KW
+*****************************************************************************

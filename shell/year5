@@ -1,0 +1,20 @@
+#!/bin/bash
+# 
+# This script gives examples of testing a
+# variable containing an integer number 
+# in two different ways.
+year=`date +'%y'`
+echo " Variable year is set to $year"
+# test variable as a string ...
+if [ "$year" == "16" ] 
+  then
+    echo "It is year 2016"
+  else
+    echo "It is not 2016" 
+fi    
+# test variable as an integer
+if [ $year -eq 16 ] 
+  then
+    echo "Year is numerically 2016"
+  fi 
+

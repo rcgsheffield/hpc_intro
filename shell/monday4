@@ -1,0 +1,15 @@
+#!/bin/bash
+# This script expects a command line parameter that is day of the week.
+#  It is not a good one as it gives no information about what it expects.
+# Later we will learn how to test the existance of command line parameters.
+if [ "$1" == "monday" ] 
+  then
+    echo "You asked for monday"
+    
+elif [ "$1" == "tuesday" ] 
+  then
+    echo "You asked for tuesday"
+else
+    echo " Neither monday not tuesday!"      
+  fi 
+

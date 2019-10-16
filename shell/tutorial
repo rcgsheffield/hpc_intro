@@ -1,0 +1,177 @@
+Shell Exercise					Account:  course
+-------------
+
+Use the Linux Course Notes along with the Linux online Manual pages to help
+you answer these questions:
+
+
+1) Filesystem and File Handling Commands
+
+    1.1	Directory Listing
+
+	a) List the files in your directory
+	b) List all the files in your directory
+	c) List all the files in long format
+
+
+    1.2 Displaying the Contents of a File
+
+	a) Display the contents of the file UNIX.intro
+	b) Move down the file one screenful
+	c) Move down one line
+	d) quit back to the command line
+
+
+    1.3	Copy and rename
+
+	a) Copy empty_file to a new file called copyfile
+	b) List filenames ending in 'file'
+
+	   Hint: '*' matches any number of characters
+
+	c) Rename (move) copyfile to myfile
+	d) Delete (remove) myfile
+
+    1.4 Searching files
+
+	a) Find the string COMMAND in the file tutorial
+	b) Search all files in your directory for the string move
+
+    1.5 Redirection & Piping
+
+	a) List all files in your directory in long format saving the
+	   output in a file called all_my_files
+	b) List files which were created in November, saving the ouput in a
+	   file called Nov_files
+	c)Find out how many people are running ssh on the iceberg login node
+
+	  Hint: To list all the process running on stoat use the command
+		'ps -a'
+
+    1.6 Directories
+
+	a) Find out where you are in the directory structure
+	b) Move to the directory above (up one level)
+	c) Move to the root directory
+	d) Return to your home directory
+	e) Create a sub directory called my_dir
+	f) Make a copy of empty_file and put it in the directory my_dir
+
+	   Hint:  Use the manual page for cp
+
+	g) Delete my_dir and its contents
+
+	   Hint:  Use the man page for rm
+
+	h) Repeat steps e), f) and  g). For step g) use one command to
+	   delete my_dir and its contents.
+
+2) The 'vi' text editor
+   --------------------
+
+2.1 Using the vi text editor create the file 'vi_help'.  Type in the text
+    contained between the two horizontal lines below.  Type in the text
+    EXACTLY as it appears.
+    
+    Use the 'Enter' key at the end of each line to start a newline, use
+    the 'Tab' key to indent the text.
+
+    vi vi_help
+
+    Hint: Read through the text first it may help you use vi
+
+--------------------------------------------------------------------------
+
+- When 'vi' starts it is in COMMAND mode.
+- To enter text 'vi' must be in TEXT ENTRY mode. 
+
+- In TEXT ENTRY mode:
+
+	-  Characters are displayed on the screen at the cursor
+	-  Use the 'Back Space' key to correct mistakes on the current line
+	-  Do not use the arrow keys to move the cursor
+	-  The 'Esc' key will return you to command mode
+	-  A message is displayed in the bottom right hand corner
+
+- There are several ways of getting into text entry mode.
+
+	i	insert at cursor
+	a	AAAAAA after cursor
+	A	append at end of line
+#
+	o	OOOO line below current line
+
+--------------------------------------------------------------------------
+
+2.2	Make the following changes to your text:
+
+	Note:   Text can only be changed in COMMAND mode
+
+	a)	Change AAAAAA to append
+	b)	Change OOOO to open
+	c)	Delete the line begining with a '#'
+	d)	Change to UPPER case the word 'command'
+	e)	Save the file and exit 'vi' by typing ':wq'
+
+3) Filename Completion
+
+   	To use filename completion:
+
+	1) Type enough characters to uniquely identify the filename
+	2) Press the 'Esc' key to complete the filename
+
+	Example:
+
+	vi v (Press the Esc key)
+	vi vi_exercise
+
+4) History Substitution -- Re-run previous commands
+
+	history		List Previous commands
+	!!		Re-run the last command
+	!n		Re-run the nth command
+	!str		Re-run the last command starting with str
+
+	1) List your previous commands
+	2) Re-run the last comamnd
+	3) Re-run a command using its number
+	4) Re-run a command using its name
+
+5) Comand aliasing
+
+	Creating aliases for commands
+
+	Example:
+
+	alias h 'history'
+
+	When the letter 'h' is typed the comand history is run.
+
+	Type 'alias' to list alias definitions
+
+	1) Create aliases for the following commands: 
+	
+	   a) List files in long format
+	   b) List files in long format by time modified, newest first
+
+	2) List alias definitions
+
+6) File access permissions
+
+	Use the command 'chmod' to change the access permissions 
+
+	1) Create a file called readonly using vi
+	2) Make the file read only by user
+	3) Edit the file make some changes to the text and try to write
+	   the changes back to the file
+	4) Create a file called groupread using vi
+	5) Make the file readable by group
+	6) Ask the person next to you if they can read your file
+
+	   Example:	more ~course02/groupread
+
+	   Note:	Replace course02 with your own account name
+
+7)	Logout
+
+	Type:	logout

@@ -1,0 +1,18 @@
+- When 'vi' starts it is in COMMAND mode.
+- To enter text 'vi' must be in TEXT ENTRY mode. 
+
+- In TEXT ENTRY mode:
+
+	-  Characters are displayed on the screen at the cursor
+	-  Use the 'Back Space' key to correct mistakes on the current line
+	-  Do not use the arrow keys to move the cursor
+	-  The 'Esc' key will return you to command mode
+	-  A message is displayed in the bottom right hand corner
+
+- There are several ways of getting into text entry mode.
+
+	i	insert at cursor
+	a	AAAAAA after cursor
+	A	append at end of line
+#
+	o	OOOO line below current line

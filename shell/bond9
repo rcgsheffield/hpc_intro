@@ -1,0 +1,22 @@
+#!/bin/bash
+#
+# Our villain is expecting James to tap into the computer
+#  and is ready for him !
+# But can you help him say good morning,afternoon or evening
+# according to the time of day, rather than hello . 
+# Hint : see the file greet.txt , get help on date command.
+# 
+interval=3
+spagent="cs1ds"
+while true;  
+do
+  if  ps -u "$spagent"  > /dev/null 2>&1
+   then
+     write $spagent < greet.txt  > /dev/null 2>&1
+     break
+  fi
+  echo "sleeping $interval seconds" 
+  sleep "$interval"
+  
+done  
+ 

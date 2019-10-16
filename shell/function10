@@ -1,0 +1,53 @@
+#!/bin/sh
+#!/bin/bash
+#Function usage with shell scripts
+
+#Declare functions that will be used
+#Provides example of passing variables into a function
+
+help()
+{
+	echo "This program determines the sum of two numbers"
+        echo "Enter the two numbers on the command line"
+
+	echo "param1 is $1"
+        echo "param2 is $2"
+
+	exit 1
+}
+
+calculate()
+{
+	echo -n "The sum of $1 and $2 is:"
+
+	#Note spaces between + sign and variables
+	result=`expr $1 + $2`
+}
+
+
+
+#The main body of the shell scripts starts here
+
+if test $# -lt 2
+then
+	help $1 $2
+fi
+ 
+xx="${1:0:1}${2:0:1}"
+
+case "$xx" in 
+ [0-9][0-9] )  
+              calculate $1 $2;;
+          * ) echo " Parameters must be numbers !"
+              help $1 $2 ;;
+esac
+
+
+echo "  $result"
+
+
+
+
+
+
+

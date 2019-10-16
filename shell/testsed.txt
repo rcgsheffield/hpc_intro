@@ -1,0 +1,2 @@
+%testreplace%
+more junk

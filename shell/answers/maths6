@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# This example adds integer numbers together and prints out the result.
+# It expects at least two parameters from the command line.
+#  This version demonstrates the use of internal functions
+#
+#  Also note the exit 9 statement below which returns a non-zero exit code.
+#  When a script runs, the exit code from it can be queries via the value of $? 
+#  Therefore it is a way of passing information about the success or type of failure 
+#  of a script. exit statement without a parameter returns exit code 0, which means SUCCESS.
+#   In the below example exit code is set to 9, which we decided to imply wrong number of params.
+# 
+help() 
+{
+echo " This command sums all the command-line parameters and prints out the results "
+echo " It requires minimum of 2 parameters. "
+echo " Supplying floating point numbers is not allowed "
+echo " It will work only with whole numbers "
+exit 9
+}
+if [ $# -lt 2 ] 
+then
+  echo "Expecting at least two parameters."
+  help 
+else
+  sum=0;
+  while [ "$1" ] 
+  do 
+    sum=$((  sum + $1 )) 
+    shift
+  done
+fi 
+echo " Sum of the numbers is:  $sum "
+
+
+

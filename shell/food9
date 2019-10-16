@@ -1,0 +1,24 @@
+#
+prefer='vegetarian vegan no_nuts halal kosher no_gluton quit'
+
+select type in $prefer ;
+
+do 
+
+ case $type in
+
+"veg"* ) food=1 ; break ;;
+
+"halal" | "kosher" ) food=2 ; break ;;
+
+"no_nuts" ) food=3 ; break ;;
+
+"no_gluton" ) food=3 ; break ;;
+
+ "quit" ) food=0 ; break;;
+
+ esac
+
+done
+echo Food is set to  $food
+

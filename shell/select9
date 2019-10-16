@@ -1,0 +1,28 @@
+#!/bin/bash
+#
+# This is an example segment of script for
+# presenting a list of items to the user and
+# inviting him to select an item.
+#
+# 
+REMOTE_HOSTS='Sheffield  Leeds  York Manchester Cambridge QUIT'
+# uncomment the next line to see its effect ...
+# PS3='Select a site by its number:'
+select host in $REMOTE_HOSTS ;
+do
+ case $host in 
+  Cambridge  ) echo 'Cambridge is a not white-rose grid site.' 
+               break;;
+           
+  Sheffield  ) echo 'You have selected Sheffield.'
+               echo 'This is a local site.' ; break ;;	     
+  Leeds | York ) echo ' WRG Node ' ; break;;
+  QUIT )      echo 'QUITING ...' 
+ 	       host='' 
+	       break;;	
+  * ) echo $host ;;       
+ esac  
+ 
+ done
+ echo $host
+ 

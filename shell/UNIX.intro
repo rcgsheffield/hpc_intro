@@ -1,0 +1,56 @@
+1. What is UNIX ?
+
+   UNIX is the generic name for a family of operating systems.  A UNIX
+   operating system provides;
+
+	Hierarchical File System
+	Process Management
+	Commands:
+	    File Management
+	    Editors
+	    ...
+
+	Command Interpreter (Shell)
+
+   UNIX is a multi-user, multi-tasking operating system.  Development of UNIX
+   started in the 1970's.  UNIX is written in the 'C' language making it
+   possible to run UNIX on any machine for which a 'C' compiler has been
+   written.  UNIX is available on many types of machines from PCs to Super
+   Computers.  Each Computer Manufacturer has developed their own
+   variant of UNIX based on the two main versions;
+
+	AT&T System V
+	BSD (Berkeley Software Distribution)
+
+1.1 The shell
+
+    The shell is a command language which provides a user interface with
+    the UNIX operating system.  The shell executes commands that are read 
+    either from a terminal or from a file.
+
+    Several shells are available;
+
+	Bourne Shell
+	'C' Shell
+	Korn Shell
+	Bash (Bourne Again Shell)
+
+    These shells differ in the facilities they provide.  At sheffield the
+    default shell is the 'C' shell.
+
+1.2 Entering commands
+
+    UNIX is case sensitive, almost all commands are in lowercase.  So before
+    you connect to a UNIX machine make sure the Caps Lock Key is OFF.
+
+    If you make a mistake when typing the command and you have not pressed
+    the return key it is possible to correct the mistake by pressing
+    the Backspace or Del key to backspace to the error.  The left and right
+    arrow keys will make the screen flash or characters will be displayed.
+    To clear the command line hold down the Ctrl Key and press U (Ctrl U).
+
+	- UNIX is case sensitive
+	- Almost all commands are in lower case
+	- Backspace/Del key to Correct typing errors 
+	- Ctrl U to clear the command line
+	- DO NOT use Arrow keys on the command line

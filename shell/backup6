@@ -1,0 +1,15 @@
+#!/bin/bash
+#
+# take back up of files whose names match a certain pattern
+# ls *8 will produce a list of all files whoses names end with 8. 
+files=`ls *8`
+for fil in $files
+do
+  backfil="${fil}.back"
+  if [ -f $fil ] &&  ! [ -e $backfil ] 
+   then
+      echo " taking a backup copy of $fil"
+      cp -rp $fil $backfil
+  fi
+done  
+ 

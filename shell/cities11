@@ -1,0 +1,29 @@
+#!/bin/bash
+#
+# Read city populations from a file
+# 
+# Explanations: 
+#  We initialize the counter i to 0. This gets incremented by one each time through the while loop.
+  
+#  We now read two variables from the input channel and store them in city[i] and population[i] 
+#  Note that first time round i=0, second time i=1 , so on. 
+# What is the input channel ?  ANSWER: It is the file citydata.txt. That is because the code block 
+#  { while .... } < citydata.txt ensures that the data comes from this file.
+#  
+#  
+  i=0
+  { while read city[i] population[i] 
+  do 
+   i=$(( i + 1 ))
+  done } < citydata.txt
+
+# Write it out in a tabulated form 
+  echo "  CITY          POPULATION " 
+  for (( j=0;j<i;j++))
+  do 
+   echo -e " ${city[j]} \t ${population[j]} " 
+  done 
+
+
+
+

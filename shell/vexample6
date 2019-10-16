@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# This script  expects to be invoked with parameters
+# It lists the values of these parameters as well as 
+# how many of them are there.
+#  
+
+echo " This command is invoked with $# parameters"
+echo " first parameter is $1 "
+echo " second parameter is $2 "
+
+echo "All the parameters: $*"
+echo " ------"
+echo "parameters one at a time" $@
+
+

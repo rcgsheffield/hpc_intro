@@ -1,0 +1,19 @@
+#!/bin/bash
+#
+# count-down from 10 to 0
+ 
+ii=10
+
+# Any one of the below forms of while (all except one commented out )
+# will produce the same effect.  The choice is yours.
+
+####  while test $ii -ge 0  
+####  while [ $ii -ge "0" ] 
+####  while (( $ii >= 0 )) 
+while [[ $ii > -1 ]] 
+ do
+   echo $ii
+   ii=$(($ii - 1 )) 
+  sleep 1
+ done  
+ 

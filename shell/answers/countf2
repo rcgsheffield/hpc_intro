@@ -1,0 +1,34 @@
+#!/bin/sh 
+# 
+# This script reads the names of two directories from the command line
+# and calculates the total number of files in both directories
+# and prints it out.
+#  
+# We have added tests for ;
+#   - At least two parameters
+#   - The existence of the directories 
+#
+# We also give more detailed report of number of files.
+#
+# D.Savas 17.12.03
+
+if test $# -ne 2 
+ then
+   echo 'At least two parameters must be specified'
+   exit
+fi
+ 
+ 
+if test -d $1 -a -d $2  
+  then
+    nfiles1=`ls $1 | wc -w`
+    nfiles2=`ls $2 | wc -w` 
+    total=`expr $nfiles1  +  $nfiles2`
+# spaces are needed ^ around the + sign  
+    echo 'Directory:' $1 'contains' $nfiles1 ' files'
+    echo 'Directory:' $2 'contains' $nfiles2 ' files'
+    echo 'Total number of files are:' $total
+  else
+     echo ' Both parameters must be directory names '
+fi  
+  

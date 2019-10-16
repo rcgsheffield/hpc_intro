@@ -1,0 +1,14 @@
+#!/bin/bash
+#  
+# This scripts prints the time every 2 seconds or so.
+mypid=$$
+echo "mypid is $mypid"
+echo
+i=0
+while [ true ]
+do
+  i=$((++i))
+  d=`date '+%H:%M:%S'`
+  echo -en  "\r $i \t $d"
+  sleep 2
+done
