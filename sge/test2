@@ -1,6 +1,6 @@
 #!/bin/bash
-#$ -cwd
-#$ -l h_rt=00:02:00
+#SBATCH --chdir=.
+#SBATCH -t 00:02:00
 #
 #  In this example we will attempt to merge the
 #  normal output  *.o*  and error output *.e* files
@@ -18,7 +18,10 @@
 #   
 #
 
-module load dev/intel-compilers/17.0.0
+
+#module use /usr/local/modulefiles/staging/eb/all/
+#module load ifort/2019.1.144-GCC-8.2.0-2.31.1
+
 
 today=`date`
 me=`whoami`
@@ -26,6 +29,6 @@ echo " The currently used shell is : $SHELL "
 echo "This job was started on/time: $today  by $me "
 echo 'This job was run on : ' $HOSTNAME
 #rm a.out
-#ifort -o fish fish.f90 
+gfortran -o fish fish.f90 
  ./fish < fish1.in
  
