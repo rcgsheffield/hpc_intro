@@ -7,11 +7,9 @@
 
 Compile the program using the fortran compiler
 
-First load the compiler module
-module load dev/intel-compilers/17.0.0
 
 Compile the fish program
-ifort fish.f90 -o fish
+Fortran fish.f90 -o fish
  
  Start with <test1> which is a simple job script. 
  Submit test1 to the batch queue and use squeue to follow 
@@ -60,7 +58,7 @@ to the scheduler.
 To run testmpi6 you need to compile the mpi example
 
 Load the openmpi compiler module
-module load  mpi/openmpi/2.0.1/intel-17.0.0
+module load  apps/openmpi/4.0.1/binary
 
 compile the diffuse program
 mpicc diffuse.c -o diffuse

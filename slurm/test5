@@ -2,7 +2,7 @@
 #
 #SBATCH --array=1-4:1
 #SBATCH --chdir=.
-#SBATCH -t 00:05:00
+#SBATCH -t 00:20:00
 #SBATCH -o myarrayoutputfile   #specify your output file here
 
 
