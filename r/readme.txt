@@ -1,11 +1,11 @@
 The lastest version of R can be loaded with
-module load apps/R/3.4.0/gcc-4.8.5
+module load apps/R/3.6.1
 
 R can then be run with
 
 $ R
 
-dat <- read.csv(file = "../data/inflammation-01.csv", header = FALSE)
+dat <- read.csv(file = "../inflammmation_data/inflammation-01.csv", header = FALSE)
 avg_day_inflammation <- apply(dat, 2, mean)
 plot(avg_day_inflammation)
 
@@ -19,13 +19,12 @@ Serial (one CPU) Batch usage
 
 Here, we assume that you wish to run the program my_code.R on the system.
 
-First, you need to write a submission file. We assume you will call this rsge.sh
+First, you need to write a submission file. We assume you will call this rslurm=.sh
 
 #!/bin/bash
-#$ -S /bin/bash
-#$ -cwd               # Run job from current directory
 
-module load apps/R/3.4.0/gcc-4.8.5 # Load version 3.4.0 of R
+
+module load apps/R/3.6.1 # Load version 3.6.1 of R
 
 R CMD BATCH readings.R test.R.o$JOB_ID
 
@@ -38,4 +37,4 @@ Ensuring that readings.R and readings.sge are both in your current working direc
 qsub rsge.sh
 
 Further details on R at
-http://docs.iceberg.shef.ac.uk/en/latest/sharc/software/apps/R.html
+http://rcg.group.shef.ac.uk/icesoftonly/software/apps/r.html
