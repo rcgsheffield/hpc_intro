@@ -1,7 +1,6 @@
 #!/bin/bash
 #$ -cwd
 #$ -l h_rt=00:02:00
-#$ -j y
 #
 #  In this example we will attempt to merge the
 #  normal output  *.o*  and error output *.e* files
@@ -18,7 +17,7 @@
 #      so that the location of the error is more easy to find.
 #   
 #
-module load dev/intel-compilers/17.0.0
+module load compilers/intel
 today=`date`
 me=`whoami`
 echo " The currently used shell is : $SHELL "

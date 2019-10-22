@@ -1,7 +1,6 @@
 #!/bin/bash 
-#SBATCH --chdir=.
-#SBATCH -t 00:02:00
-#SBATCH -o myoutputfile   #specify your output file here
+#
+#$ -l h_rt=00:05:00
 #
 #   Running your jobs:
 #  
@@ -22,11 +21,9 @@
 #        -read the data from your input file
 #        -write the results into a job output file 
 #         or another file of your choice.
-#  (4) Submit the script to SLURM.
+#  (4) Submit the script to SGE.
 #  (5) Add commands to join the error and normal output into one single file
 #      and also to email you about the progress of your job. 
 #  
 
-
-#write the command to execute the fish program below
 

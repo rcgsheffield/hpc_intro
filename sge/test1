@@ -8,9 +8,6 @@
 #  (4) From the output file(s) find out the name of the worker
 #        that ran your job.
 
-#submit this script using the command
-#sbatch test1
-
 echo "This job was started on/time:  `date` "
 echo 'This job was run on : ' $HOSTNAME
  
@@ -25,8 +22,8 @@ ls -mf
 
 sleep 30
 
-echo ' The SLURM Related Environment Variables are:' 
-set | grep 'SLURM_'
+echo ' The sun Grid Engine Related Environment Variables are:' 
+set | grep 'SGE_'
 
 echo 'Have a good day' $me 'Your job is finished.'  
  

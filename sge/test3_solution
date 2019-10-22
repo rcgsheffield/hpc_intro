@@ -28,12 +28,9 @@
 #  (5) Add commands to join the error and normal output into one single file
 #      and also to email you about the progress of your job. 
 #  
+#   ./fish < fish2.in > fish2.output
 
 echo "Hello `whoami`"
 echo $HOSTNAME
-
-
-
-   ./fish < fish2.in > fish2.output
 
 

@@ -8,7 +8,7 @@
 Compile the program using the fortran compiler
 
 First load the compiler module
-module load dev/intel-compilers/17.0.0
+module load compilers/intel/14.0
 
 Compile the fish program
 ifort fish.f90 -o fish
@@ -60,9 +60,9 @@ to the scheduler.
 To run testmpi6 you need to compile the mpi example
 
 Load the openmpi compiler module
-module load  mpi/openmpi/2.0.1/intel-17.0.0
+module load  mpi/intel/openmpi/1.8.3
 
-compile the diffuse program
+comile the diffuse program
 mpicc diffuse.c -o diffuse
  
   
